@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>一次教會你學會4種程式語言 - 康鴻玩程式</title>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="package/bootstrap/bootstrap.min.css">
+    <script src="package/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="jspkgs/vue.global.js"></script>
+
+    <style>
+        h1 {
+            text-decoration: underline;
+            -webkit-text-decoration-color: yellow; /* safari still uses vendor prefix */
+            text-decoration-color: yellow;
+            text-decoration-thickness: 0.4rem;
+            margin-bottom: 20px;
+        }
+        .high-light {
+            color: white;
+            background-color: red;
+            font-weight: bolder;
+            /* text-decoration: underline; */
+            font-size: 1.5rem;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .card {
+            margin-bottom: 10px;
+        }
+        .card-title {
+            color: white; 
+            background-color: black; 
+            /* border-radius: 5px;  */
+            border-radius: 5px 5px 0px 0px;
+            padding: 15px;
+            /* margin: -16px -16px 16px; */
+        }
+        .list-sub-text {
+            word-break: keep-all; 
+            font-size: 12px; 
+            color: gray;
+        }
+        .del-price {
+            color: gray;
+        }
+        .sale-price {
+            color: red; 
+            font-size: 25px;  
+            margin: 5px;
+        }
+        .sale-price-tag {
+            color: white; 
+            background-color: red; 
+            padding: 3px 7px; 
+            border-radius: 5px;
+        }
+        .sale-btn {
+            display: inline-block;
+            width: 100%;
+            min-width: 150px;
+            max-width: 300px;
+            color: white; 
+            background-color: #0d6efd; 
+            /* background-color: blue;  */
+            padding: 5px; 
+            border-radius: 5px;
+            text-decoration: none;
+            /* margin-left:5px; */
+            /* margin-right:5px; */
+        }
+        .sale-btn:hover {
+            color: lightgray;
+        }
+        .step-title {
+            color: brown;
+            display: block;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div id="app" style="background-color: whitesmoke;">
+        <div class="container" style="max-width: 800px; padding: 30px; text-align: center; background-color: whitesmoke;">
+            <div>
+                <!-- 1. 百萬IT學院主題 -->
+                <div style="color: gray; margin-bottom: 5px;">
+                    <div>百萬IT之路</div>
+                    <div>Level1 - 1週看透現代程式的底層邏輯</div>
+                    <!-- <div>讓你一次入門4個熱門程式語言 Python, JavaScript, Java, C#</div> -->
+                </div>
+
+                <!-- 2.前言 -->
+                <div>
+                    <h1 style="word-break: keep-all;">注意！程式設計師、新手們!</h1>
+                </div>
+                <p style="word-wrap:break-word; line-height: 1.5;">
+                    這個影片將告訴你 <br>
+                    <span class="high-light">現代程式語言</span> <br>
+                    換湯不換藥的
+                    <span class="high-light">底層邏輯</span> <br>
+                    <!-- <span class="high-light">4大密秘</span> <br> -->
+                    幫助你看透 <span class="high-light">現代程式的三大設計手法</span> <br> 
+                    <span class="high-light">輕鬆入門4大熱門程式語言</span><br>
+                    Python、JavaScript、Java、C#<br>
+                    <!-- <span class="high-light">為開發系統打下堅實基礎</span><br> -->
+                </p>
+
+                <!-- 3.影片 -->
+                <div>
+                    <iframe style="width:100%; height: 57vw; max-width: 700px; max-height: 393px; border-radius:10px;" 
+                        src="https://www.youtube.com/embed/u5pA4xe7agA?si=_K5HZbXZAfpd5Hlz" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <p>你真的需要這些程式技能嗎? 上述影片中告訴您~</p>
+
+                <!-- 4.禮物區 -->
+
+
+                <!-- 5.是否準備好? -->
+                <p v-if="isAlreadyToLearn == false">
+                    <button class="btn btn-primary" v-on:click="isAlreadyToLearn = true">已看完影片，我想要學習!</button>
+                </p>
+
+                <!-- 6.已準備好學習 -->
+                <div v-if="isAlreadyToLearn == true">
+                    <!-- 6.1.方案 -->
+                    <div class="row" style="text-align: center;">
+                        <!-- A方案: 程序編程 -->
+                        <div class="col-12 col-sm-6">
+                            <div class="card">
+                                <h5 class="card-title">A方案: 程序編程</h5>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title">A方案: 程序編程</h5> -->
+                                    <h6 class="card-subtitle mb-2 text-muted">讓寫程式就像在說話一樣簡單</h6>
+                                    <div class="card-text">
+                                        Python、JavaScript、Java、C#
+                                        <br>
+
+                                        <div style="text-align: left;">
+                                            <ul>
+                                                <li>變數、值與型別 <span class="list-sub-text">讓程式記憶</span></li>
+                                                <li>陣列 <span class="list-sub-text">一次記憶多個資料</span></li>
+                                                <li>流程控制 <span class="list-sub-text">讓程式有思考的能力</span></li>
+                                                <li>函式 <span class="list-sub-text">封裝一段程式</span></li>
+                                                <li>註解 <span class="list-sub-text">用註解說人話</span></li>
+                                                <li>專案1 BMI計算</li>
+                                                <li>專案2 計算機</li>
+                                                <li>專案3 猜數字遊戲</li>
+                                            </ul>  
+                                        </div>
+
+                                        <div v-if="isFlashSale == false">
+                                            <span class="price">$6,000</span>
+                                        </div>
+                                        <div v-else>
+                                            <del class="del-price">$6,000</del>
+                                            <span class="sale-price">$4,800</span>
+                                            <span class="sale-price-tag">8折</span><br>
+                                            <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                        </div>
+
+                                        <!-- <a class="btn btn-primary" href="#" role="button">Link</a> -->
+
+                                        <br>
+                                        <a class="sale-btn" href="#pay">選取購買</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- B方案: 物件導向 -->
+                        <div class="col-12 col-sm-6">
+                            <div class="card">
+                                <h5 class="card-title">B方案: 物件導向</h5>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title">B方案: 物件導向</h5> -->
+                                    <h6 class="card-subtitle mb-2 text-muted">用看待世界的角度看程式</h6>
+                                    <div class="card-text">
+                                        Python、JavaScript、Java、C#
+                                        <br>
+
+                                        <div style="text-align: left;">
+                                            <ul>
+                                                <li>類別與物件 <span class="list-sub-text">讓程式虛擬萬物</span></li>
+                                                <li>繼承、多型與鴨子型別 <span class="list-sub-text">讓物件擁有多重角色</span></li>
+                                                <li>介面、協定與鴨子型別  <span class="list-sub-text">外掛物件角色</span></li>
+                                                <li>專案1 BMI計算 - 類別版</li>
+                                                <li>專案2 BMI計算 - 介面協定版</li>
+                                                <li>專案3 計算機 - 類別版</li>
+                                                <li>專案4 計算機 - 介面協定版</li>
+                                            </ul>  
+                                        </div>
+
+                                        <div v-if="isFlashSale == false">
+                                            <span class="price">$7,000</span>
+                                        </div>
+                                        <div v-else>
+                                            <del class="del-price">$7,000</del>
+                                            <span class="sale-price">$5,600</span>
+                                            <span class="sale-price-tag">8折</span><br>
+                                            <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                        </div>
+
+                                        <br>
+                                        <a class="sale-btn" href="#pay">選取購買</a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- C方案: 函式編程 -->
+                        <div class="col-12 col-sm-6">
+                            <div class="card">
+                                <h5 class="card-title">C方案: 函式編程</h5>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title">C方案: 函式編程</h5> -->
+                                    <h6 class="card-subtitle mb-2 text-muted">用函式簡化物件導向的複雜問題</h6>
+                                    <div class="card-text">
+                                        Python、JavaScript、Java、C#
+                                        <br>
+
+                                        <div style="text-align: left;">
+                                            <ul>
+                                                <li>泛型 <span class="list-sub-text">讓程式虛擬萬物</span></li>
+                                                <li>集合 <span class="list-sub-text">讓物件擁有多重角色</span></li>
+                                                <li>Lambda  <span class="list-sub-text">外掛物件角色</span></li>
+                                                <li>專案1 計算機 - 函式版</li>
+                                                <li>專案2 吃雞遊戲 - 函式版</li>
+                                                <li>專案3 飲料訂製 - 函式版</li>
+                                            </ul>  
+                                        </div>
+
+                                        <div v-if="isFlashSale == false">
+                                            <span class="price">$8,000</span>
+                                        </div>
+                                        <div v-else>
+                                            <del class="del-price">$8,000</del>
+                                            <span class="sale-price">$6,400</span>
+                                            <span class="sale-price-tag">8折</span><br>
+                                            <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                        </div>
+
+                                        <br>
+                                        <a class="sale-btn" href="#pay">選取購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- D方案: 程序編程 + 物件導向 + 函式編程 -->
+                        <div class="col-12 col-sm-6">
+                            <div class="card">
+                                <h5 class="card-title solution-title">D方案: 
+                                    <span style='word-break: keep-all;'>程序編程</span> + 
+                                    <span style='word-break: keep-all;'>物件導向</span> + 
+                                    <span style='word-break: keep-all;'>函式編程</span></h5>
+                                <div class="card-body">
+                                <!-- <h5 class="card-title solution-title">D方案: 
+                                    <span style='word-break: keep-all;'>程序編程</span> + 
+                                    <span style='word-break: keep-all;'>物件導向</span> + 
+                                    <span style='word-break: keep-all;'>函式編程</span></h5> -->
+                                <h6 class="card-subtitle mb-2 text-muted">現代程式語言的三大設計手法</h6>
+                                <div class="card-text">
+                                    Python、JavaScript、Java、C#
+                                    <br>
+
+
+                                    <div style="text-align: left;">
+                                        <ul>
+                                            <li>變數、值與型別 <span class="list-sub-text">讓程式記憶</span></li>
+                                            <li>陣列 <span class="list-sub-text">一次記憶多個資料</span></li>
+                                            <li>流程控制 <span class="list-sub-text">讓程式有思考的能力</span></li>
+                                            <li>函式 <span class="list-sub-text">封裝一段程式</span></li>
+                                            <li>註解 <span class="list-sub-text">用註解說人話</span></li>
+                                            <li>專案1 BMI計算</li>
+                                            <li>專案2 計算機</li>
+                                            <li>專案3 猜數字遊戲</li>
+                                        </ul>  
+
+                                    
+                                        <ul>
+                                            <li>類別與物件 <span class="list-sub-text">讓程式虛擬萬物</span></li>
+                                            <li>繼承、多型與鴨子型別 <span class="list-sub-text">讓物件擁有多重角色</span></li>
+                                            <li>介面、協定與鴨子型別  <span class="list-sub-text">外掛物件角色</span></li>
+                                            <li>專案1 BMI計算 - 類別版</li>
+                                            <li>專案2 BMI計算 - 介面協定版</li>
+                                            <li>專案3 計算機 - 類別版</li>
+                                            <li>專案4 計算機 - 介面協定版</li>
+                                        </ul>  
+                                    
+
+                                    
+                                        <ul>
+                                            <li>泛型 <span class="list-sub-text">讓程式虛擬萬物</span></li>
+                                            <li>集合 <span class="list-sub-text">讓物件擁有多重角色</span></li>
+                                            <li>Lambda  <span class="list-sub-text">外掛物件角色</span></li>
+                                            <li>專案1 計算機 - 函式版</li>
+                                            <li>專案2 吃雞遊戲 - 函式版</li>
+                                            <li>專案3 飲料訂製 - 函式版</li>
+                                        </ul>  
+                                    </div>
+
+                                    <div v-if="isFlashSale == false">
+                                        <del class="del-price">$21,000</del>
+                                        <span class="sale-price">$18,900</span>
+                                        <span class="sale-price-tag">9折</span><br>
+                                        <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                    </div>
+                                    <div v-else>
+                                        <del class="del-price">$21,000</del>
+                                        <span class="sale-price">$13,650</span>
+                                        <span class="sale-price-tag">65折</span><br>
+                                        <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                    </div>
+
+                                    <br>
+                                    <a class="sale-btn" href="#pay">選取購買</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <!-- 6.2.匯款資訊 -->
+                    <div class="row" id="pay">
+                        <!-- title -->
+                        <div class="col-12"><h1 style="margin-bottom: 20px;">台幣匯款資訊</h1></div>
+
+                        <!-- <div style="text-align: left;"> -->
+                            <!-- step1 -->
+                            <div class="col-12 col-sm-6" style="margin-bottom: 20px;border: solid blue; background-color: lightgray; border-radius:5px;">
+                                <span class="step-title">Step1 | 新台幣匯款帳號</span>
+                                銀行帳號：822 中國信托<br>
+                                帳號：370 540 318 490<br>
+                                <span style="color: gray; font-size: 12px;">註明自已的中文姓名</span>
+                            </div>
+                            <!-- step2 -->
+                            <div class="col-12 col-sm-6"style="margin-bottom: 20px;">
+                                <span class="step-title">Step2 | 匯款金額</span>
+                                Ａ方案：$4,800&nbsp;&nbsp;<br>
+                                B方案：$5,600&nbsp;&nbsp;<br>
+                                C方案：$6,400&nbsp;&nbsp;<br>
+                                D方案：$13,650
+                            </div>
+                            <!-- step3 -->
+                            <div class="col-12 col-sm-6"style="margin-bottom: 20px;">
+                                <span class="step-title">Step3：匯款完成連絡方式</span>
+                                請傳Email：lokanghung@gmail.com <br>
+                                或加入Line ID：0925519860&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <!-- step4 -->
+                            <div class="col-12 col-sm-6"style="margin-bottom: 20px; ">
+                                <span class="step-title">Step4 | 並提供</span>
+                                ✓匯款帳號後4碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                ✓你的姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                ✓Email(登入課程用)
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- 7.與我聊聊 -->
+                <h1>與我聊聊</h1>
+                <div style="margin-bottom: 10px;">不確定自已要什麼? 遇到瓶頸不知如何是好? <br> 有些問題想解決? 讓我們聊聊吧 </div>
+                <a class="sale-btn" target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1KBWQ0_MHFaBtYHft-nmyJJlxpOkAMG91yAaLsg84sY2yUhYrSq88H86NFVr-sCX9S0DJrAfe5">
+                    <span style="color: red; font-weight: bolder;">Help!!!</span> 預約咨詢
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const { createApp } = Vue;
+
+    createApp({
+        data() {
+            return {
+                message: 'Hello Vue!'
+                ,
+                countDownTime: new Date(2024,11,31)
+                ,
+                timeinterval: null
+                ,
+                day: 0
+                ,
+                min: 0
+                ,
+                hour: 0
+                ,
+                sec: 0
+                ,
+                remainTimeString: ''
+                ,
+                isAlreadyToLearn: false
+            }
+        }
+        ,
+        mounted: function(){
+            this.stratCountDownInterval();
+        }
+        ,
+        computed: {
+            isFlashSale: function(){
+                if(this.day == 0 && this.min == 0 && this.hour == 0 && this.sec == 0)
+                    return false;
+                
+                return true;
+            }
+        }
+        ,
+        methods: {
+            greet(event) {
+                alert(123);
+            }
+            ,
+            generateRemainTimeString(){
+                const timeNow = new Date();
+                // console.log(timeNow)
+                const remain = this.countDownTime - timeNow;//得到的是毫秒
+                // console.log(remain)
+                //定義remain的剩下幾天幾時幾分幾秒
+                this.sec = Math.floor(remain/1000)%60;
+                this.min = Math.floor(remain/1000/60)%60;
+                this.hour = Math.floor(remain/1000/60/60)%24;
+                this.day = Math.floor(remain/1000/60/60/24);
+                
+                this.remainTimeString = '' + this.day + '天 ' +
+                                        ('' + this.hour).padStart(2, '0') + ':' + 
+                                        ('' + this.min).padStart(2, '0') + ':' + 
+                                        ('' + this.sec).padStart(2, '0');
+            }
+            ,
+            stratCountDownInterval(){
+
+                //first.
+                var t = this.countDownTime - (new Date());
+
+                if(t<0){
+                    clearInterval(this.timeinterval);
+                }else{
+                    this.generateRemainTimeString();
+                }
+
+                //interval.
+                this.timeinterval = setInterval(() => {
+                    var t = this.countDownTime - (new Date());
+
+                    if(t<0){
+                        clearInterval(this.timeinterval);
+                    }else{
+                        this.generateRemainTimeString();
+                    }
+                },1000);
+            }
+        }
+    }).mount('#app');
+    </script>
+  </body>
