@@ -70,6 +70,20 @@
             /* margin-left:5px; */
             /* margin-right:5px; */
         }
+        .talk-btn {
+            display: inline-block;
+            /* width: 100%;
+            min-width: 150px;
+            max-width: 300px; */
+            color: white; 
+            background-color: #0d6efd; 
+            /* background-color: blue;  */
+            padding: 10px; 
+            border-radius: 5px;
+            text-decoration: none;
+            /* margin-left:5px; */
+            /* margin-right:5px; */
+        }
         .sale-btn:hover {
             color: lightgray;
         }
@@ -83,14 +97,14 @@
 
     </style>
   </head>
-  <body>
+  <body style="background-color: whitesmoke;">
     <div id="app" style="background-color: whitesmoke;">
         <div class="container" style="max-width: 800px; padding: 30px; text-align: center; background-color: whitesmoke;">
             <div>
                 <!-- 1. 百萬IT學院主題 -->
                 <div style="color: gray; margin-bottom: 5px;">
                     <div>百萬IT之路</div>
-                    <div>Level1 - 1週看透現代程式的底層邏輯</div>
+                    <div>階段1 - 1週看透現代程式的底層邏輯</div>
                     <!-- <div>讓你一次入門4個熱門程式語言 Python, JavaScript, Java, C#</div> -->
                 </div>
 
@@ -113,7 +127,7 @@
                 <!-- 3.影片 -->
                 <div>
                     <iframe style="width:100%; height: 57vw; max-width: 700px; max-height: 393px; border-radius:10px;" 
-                        src="https://www.youtube.com/embed/u5pA4xe7agA?si=_K5HZbXZAfpd5Hlz" 
+                        src="https://www.youtube-nocookie.com/embed/u5pA4xe7agA?si=_K5HZbXZAfpd5Hlz" 
                         title="YouTube video player" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -124,16 +138,40 @@
 
                 <p>你真的需要這些程式技能嗎? 上述影片中告訴您~</p>
 
-                <!-- 4.禮物區 -->
+
+                <!-- 4.是否準備好? -->
+                <div v-if="isAlreadyToLearn == false">
+                    <button class="btn btn-primary" v-on:click="isAlreadyToLearn = true">已看完影片，我想要學~</button>
+                    <br>
+                    <br>
+                    <br>
+                </div>
 
 
-                <!-- 5.是否準備好? -->
-                <p v-if="isAlreadyToLearn == false">
-                    <button class="btn btn-primary" v-on:click="isAlreadyToLearn = true">已看完影片，我想要學習!</button>
-                </p>
+                <!-- 5.禮物區 -->
+                <h1>領取小禮物</h1>
+                <div v-if="isSecretEnabled==true" class="row justify-content-center">
+                    <div class="col-auto">
+                        <input class="form-control" type="text" placeholder="輸入您在影片中的留言" v-model="inputSecret">
+                        <a class="btn btn-link" v-on:click="getGift()">領取</a>
+                    </div>
+                </div>
+
+                <div v-if="givenGifts.length > 0">
+                    <div style="color: gray; font-size: 12px;">點擊下載您的小禮物</div>
+                    <div v-for="g in givenGifts">
+                        <a v-bind:href="g.url" target="_blank">
+                            <img style="width: 30px;" src="imgs/icons8-gift-48.png">{{ g.name }}
+                        </a>
+                    </div>
+                </div>
+
 
                 <!-- 6.已準備好學習 -->
                 <div v-if="isAlreadyToLearn == true">
+                    <br>
+
+                    <h1>課程方案</h1>
                     <!-- 6.1.方案 -->
                     <div class="row" style="text-align: center;">
                         <!-- A方案: 程序編程 -->
@@ -373,6 +411,8 @@
                             </div>
                         <!-- </div> -->
                     </div>
+
+                    <br>
                 </div>
 
                 <br>
@@ -380,7 +420,7 @@
                 <!-- 7.與我聊聊 -->
                 <h1>與我聊聊</h1>
                 <div style="margin-bottom: 10px;">不確定自已要什麼? 遇到瓶頸不知如何是好? <br> 有些問題想解決? 讓我們聊聊吧 </div>
-                <a class="sale-btn" target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1KBWQ0_MHFaBtYHft-nmyJJlxpOkAMG91yAaLsg84sY2yUhYrSq88H86NFVr-sCX9S0DJrAfe5">
+                <a class="talk-btn" target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1KBWQ0_MHFaBtYHft-nmyJJlxpOkAMG91yAaLsg84sY2yUhYrSq88H86NFVr-sCX9S0DJrAfe5">
                     <span style="color: red; font-weight: bolder;">Help!!!</span> 預約咨詢
                 </a>
 
@@ -394,7 +434,7 @@
     createApp({
         data() {
             return {
-                message: 'Hello Vue!'
+                urlParams: null
                 ,
                 countDownTime: new Date(2024,11,31)
                 ,
@@ -411,10 +451,24 @@
                 remainTimeString: ''
                 ,
                 isAlreadyToLearn: false
+                ,
+                gifts: [
+                    {key: "aaa", secrets: ["1+1週學會一個程式語言"], name: "JavaScript第1章變數", url: "https://lokanghung.github.io/pdfs/js_lite/01_var.pdf"},
+                    {key: "bbb", secrets: ["4+1 API"], name: "JavaScript第2章物件", url: "https://lokanghung.github.io/pdfs/js_lite/02_obj.pdf"},
+                ]
+                ,
+                isSecretEnabled: true
+                ,
+                inputSecret: ""
+                ,
+                keys: []
             }
         }
         ,
         mounted: function(){
+            this.getUrlParams();
+            this.enableSecret();
+            this.showGifts();
             this.stratCountDownInterval();
         }
         ,
@@ -425,11 +479,80 @@
                 
                 return true;
             }
+            ,
+            givenGifts: function(){
+                let result = [];
+
+                this.keys.forEach(k => {
+                    this.gifts.filter(g => {
+                        if(g.key == k){
+                            result.push(g);
+                        }
+                    });
+                });
+                
+                // console.log(result);
+                return result;
+            }
         }
         ,
         methods: {
-            greet(event) {
-                alert(123);
+			getUrlParams: function(){
+				this.urlParams = {};
+				let uri = window.location.href.split('?');
+				if (uri.length == 2)
+				{
+					let vars = uri[1].split('&');
+					let getVars = {};
+					let tmp = '';
+					vars.forEach(function(v){
+						tmp = v.split('=');
+						if(tmp.length == 2)
+						getVars[tmp[0]] = tmp[1];
+					});
+					// console.log(getVars);
+					this.urlParams = getVars;
+				}
+			}
+            ,
+            enableSecret: function(){
+                if(this.urlParams["secret"] == "1"){
+                    this.isSecretEnabled = true;
+                }
+            }
+            ,
+            showGifts: function(){
+                if(this.urlParams == null || this.urlParams["keys"] == undefined){
+                    return;
+                }
+                
+                // alert(123);
+
+                let tempString = "";
+                if(this.urlParams["keys"].includes("#") == true){
+                    tempString = this.urlParams["keys"].split('#')[0];
+                }
+                this.keys = tempString.split(',');
+                // console.log(this.keys);
+                // this.keys.forEach(k => {
+                //     console.log(k);
+                // });
+            }
+            ,
+            getGifts: function(){
+                let gs = this.gifts.filter(g => g.secrets.includes(this.inputSecret) == true);
+                if(gs.length == 0){
+                    alert("無效的留言，請重新輸入!");
+                    return;
+                }
+
+                gs.forEach( g => {
+                    if(this.keys.includes(g.key) == false){
+                        this.keys.push(key);
+                    }
+                });
+
+                this.inputSecret = "";
             }
             ,
             generateRemainTimeString(){
