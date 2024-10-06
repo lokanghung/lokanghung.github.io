@@ -94,7 +94,20 @@
             font-weight: bolder;
             margin-bottom: 10px;
         }
-
+        .day-to-class {
+            color: red; 
+            /* background-color: red;  */
+            padding: 3px 7px; 
+            border-radius: 5px;
+        }
+        .program-tips {
+            color: red;
+            font-size: 12px; 
+        }
+        .new-langs {
+            color: gray;
+            font-size: 12px; 
+        }
     </style>
   </head>
   <body style="background-color: whitesmoke;">
@@ -125,9 +138,10 @@
                 </p>
 
                 <!-- 3.影片 -->
+                <!-- src="https://www.youtube-nocookie.com/embed/u5pA4xe7agA?si=_K5HZbXZAfpd5Hlz"  -->
                 <div>
                     <iframe style="width:100%; height: 57vw; max-width: 700px; max-height: 393px; border-radius:10px;" 
-                        src="https://www.youtube-nocookie.com/embed/u5pA4xe7agA?si=_K5HZbXZAfpd5Hlz" 
+                        src="https://www.youtube-nocookie.com/embed/st3S7IeIFLo?si=Z7BVxzyH4hKeUOg5" 
                         title="YouTube video player" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -196,6 +210,14 @@
                                                 <li>專案2 計算機</li>
                                                 <li>專案3 猜數字遊戲</li>
                                             </ul>  
+                                            <!-- <ul>
+                                                <li class="program-tips">程式秘笈1份，超詳細註解，無需另作筆記</li>
+                                            </ul> -->
+                                            <ul>
+                                                <li class="new-langs">後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、C/C++將自動更新，無需另行付費</li>
+                                            </ul>  
+
+                                            <span class="new-langs"></span>
                                         </div>
 
                                         <div v-if="isFlashSale == false">
@@ -205,13 +227,14 @@
                                             <del class="del-price">$6,000</del>
                                             <span class="sale-price">$4,800</span>
                                             <span class="sale-price-tag">8折</span><br>
-                                            <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                            <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span><br>
+                                            <span class="day-to-class">{{ dayToClassMessage }}</span>
                                         </div>
 
                                         <!-- <a class="btn btn-primary" href="#" role="button">Link</a> -->
 
                                         <br>
-                                        <a class="sale-btn" href="#pay">選取購買</a>
+                                        <a class="sale-btn" href="#pay">預購</a>
                                     </div>
 
                                 </div>
@@ -239,6 +262,9 @@
                                                 <li>專案3 計算機 - 類別版</li>
                                                 <li>專案4 計算機 - 介面協定版</li>
                                             </ul>  
+                                            <ul>
+                                                <li class="new-langs">後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、將自動更新，無需另行付費</li>
+                                            </ul>  
                                         </div>
 
                                         <div v-if="isFlashSale == false">
@@ -248,11 +274,12 @@
                                             <del class="del-price">$7,000</del>
                                             <span class="sale-price">$5,600</span>
                                             <span class="sale-price-tag">8折</span><br>
-                                            <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                            <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span><br>
+                                            <span class="day-to-class">{{ dayToClassMessage }}</span>
                                         </div>
 
                                         <br>
-                                        <a class="sale-btn" href="#pay">選取購買</a>
+                                        <a class="sale-btn" href="#pay">預購</a>
 
                                     </div>
 
@@ -280,6 +307,10 @@
                                                 <li>專案2 吃雞遊戲 - 函式版</li>
                                                 <li>專案3 飲料訂製 - 函式版</li>
                                             </ul>  
+                                            <ul>
+                                                <li class="new-langs">後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、C將自動更新，無需另行付費</li>
+                                            </ul>  
+
                                         </div>
 
                                         <div v-if="isFlashSale == false">
@@ -289,11 +320,12 @@
                                             <del class="del-price">$8,000</del>
                                             <span class="sale-price">$6,400</span>
                                             <span class="sale-price-tag">8折</span><br>
-                                            <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                            <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span><br>
+                                            <span class="day-to-class">{{ dayToClassMessage }}</span>
                                         </div>
 
                                         <br>
-                                        <a class="sale-btn" href="#pay">選取購買</a>
+                                        <a class="sale-btn" href="#pay">預購</a>
                                     </div>
                                 </div>
                             </div>
@@ -338,7 +370,7 @@
                                             <li>專案2 BMI計算 - 介面協定版</li>
                                             <li>專案3 計算機 - 類別版</li>
                                             <li>專案4 計算機 - 介面協定版</li>
-                                        </ul>  
+                                        </ul>
                                     
 
                                     
@@ -349,7 +381,11 @@
                                             <li>專案1 計算機 - 函式版</li>
                                             <li>專案2 吃雞遊戲 - 函式版</li>
                                             <li>專案3 飲料訂製 - 函式版</li>
-                                        </ul>  
+                                        </ul>
+
+                                        <ul>
+                                            <li class="new-langs">後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、C/將自動更新，無需另行付費</li>
+                                        </ul>
                                     </div>
 
                                     <div v-if="isFlashSale == false">
@@ -357,16 +393,19 @@
                                         <span class="sale-price">$18,900</span>
                                         <span class="sale-price-tag">9折</span><br>
                                         <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                        
                                     </div>
                                     <div v-else>
                                         <del class="del-price">$21,000</del>
                                         <span class="sale-price">$13,650</span>
                                         <span class="sale-price-tag">65折</span><br>
-                                        <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span>
+                                        <span class="sale-price-tag">{{ '限時 ' + remainTimeString }}</span><br>
+                                        <span class="day-to-class">{{ dayToClassMessage }}</span>
+                                        
                                     </div>
 
                                     <br>
-                                    <a class="sale-btn" href="#pay">選取購買</a>
+                                    <a class="sale-btn" href="#pay">預購</a>
                                 </div>
                                 </div>
                             </div>
@@ -398,7 +437,7 @@
                             </div>
                             <!-- step3 -->
                             <div class="col-12 col-sm-6"style="margin-bottom: 20px;">
-                                <span class="step-title">Step3：匯款完成連絡方式</span>
+                                <span class="step-title">Step3 | 匯款完成連絡方式</span>
                                 請傳Email：lokanghung@gmail.com <br>
                                 或加入Line ID：0925519860&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
@@ -436,7 +475,9 @@
             return {
                 urlParams: null
                 ,
-                countDownTime: new Date(2024,11,31)
+                countDownTime: new Date(2024,10,11)
+                ,
+                dayToClassMessage: '11月12日 課程上線!'
                 ,
                 timeinterval: null
                 ,
