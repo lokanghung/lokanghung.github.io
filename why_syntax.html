@@ -42,6 +42,44 @@
             font-size: 12px; 
             color: gray;
         }
+        .main-desc {
+            /* font-weight: bolder;  */
+            text-align: left;
+            letter-spacing: 3px;
+        }
+        .main-desc-high-light {
+            text-decoration: underline;
+            -webkit-text-decoration-color: yellow; /* safari still uses vendor prefix */
+            text-decoration-color: yellow;
+            font-weight: bolder;
+            text-decoration-thickness: 0.2rem;
+            /* margin-bottom: 20px; */
+        }
+        .sub-desc {
+            text-align: left;
+            word-break: keep-all; 
+            font-size: 12px; 
+        }
+        .ul-context {
+            text-align: left;
+            color: gray;
+            /* font-size: 14px;  */
+        }
+        .newlangs-ul-context {
+            text-align: left;
+            color: gray;
+            font-size: 12px; 
+        }
+        .langs-desc {
+            text-align: center; 
+            font-weight:bold;
+        }
+
+        /* .program-tips {
+            color: red;
+            font-size: 12px; 
+        } */
+
         .del-price {
             color: gray;
         }
@@ -100,14 +138,7 @@
             padding: 3px 7px; 
             border-radius: 5px;
         }
-        .program-tips {
-            color: red;
-            font-size: 12px; 
-        }
-        .new-langs {
-            color: gray;
-            font-size: 12px; 
-        }
+
     </style>
   </head>
   <body style="background-color: whitesmoke;">
@@ -125,22 +156,37 @@
                 <div>
                     <h1 style="word-break: keep-all;">注意！程式設計師、新手們!</h1>
                 </div>
+
+                
                 <p style="word-wrap:break-word; line-height: 1.5;">
                     這個影片將告訴你 <br>
                     <span class="high-light">現代程式語言</span> <br>
-                    換湯不換藥的
-                    <span class="high-light">底層邏輯</span> <br>
+                    不外乎就這<span class="high-light">三大設計手法</span><br>
+                    可說是換湯不換藥的<span class="high-light">底層邏輯</span> <br>
                     <!-- <span class="high-light">4大密秘</span> <br> -->
+                    學會了<span class="high-light">幫助你輕鬆入門</span><br><span class="high-light">4大熱門程式語言</span><br>
+                    <span class="high-light">Python、JavaScript、Java、C#</span><br>
+                    <!-- <span class="high-light">為開發系統打下堅實基礎</span><br> -->
+                    <span>甚至入門更多的熱門程式語言</span><br>
+                    <span>TypeScript、Golang、Kotlin、Swift、C/C++</span>
+                </p>
+
+
+                <!-- <p style="word-wrap:break-word; line-height: 1.5;">
+                    這個影片將告訴你 <br>
+                    <span class="high-light">現代程式語言</span> <br>
+                    <span class="high-light">底層邏輯</span> <br>
                     幫助你看透 <span class="high-light">現代程式的三大設計手法</span> <br> 
                     <span class="high-light">輕鬆入門4大熱門程式語言</span><br>
-                    Python、JavaScript、Java、C#<br>
-                    <!-- <span class="high-light">為開發系統打下堅實基礎</span><br> -->
-                </p>
+                    <span class="high-light">Python、JavaScript、Java、C#</span><br>
+                    <span>甚至入門更多的熱門程式語言</span><br>
+                    <span>TypeScript、Golang、Kotlin、Swift、C/C++</span>
+                </p> -->
 
                 <!-- 3.影片 -->
                 <!-- src="https://www.youtube-nocookie.com/embed/u5pA4xe7agA?si=_K5HZbXZAfpd5Hlz"  -->
                 <div>
-                    <iframe style="width:100%; height: 57vw; max-width: 700px; max-height: 393px; border-radius:10px;" 
+                    <iframe style="width:100%; height: 57vw; max-width: 700px; max-height: 393px; border-radius:10px; border: solid" 
                         src="https://www.youtube-nocookie.com/embed/st3S7IeIFLo?si=Z7BVxzyH4hKeUOg5" 
                         title="YouTube video player" 
                         frameborder="0" 
@@ -150,7 +196,7 @@
                     </iframe>
                 </div>
 
-                <p>你真的需要這些程式技能嗎? 上述影片中告訴您~</p>
+                <p>你真的需要這三大設計手法嗎? 上述的影片告訴您~</p>
 
 
                 <!-- 4.是否準備好? -->
@@ -191,21 +237,35 @@
                         <!-- A方案: 程序編程 -->
                         <div class="col-12 col-sm-6">
                             <div class="card">
-                                <h5 class="card-title">A方案: 程序編程</h5>
+                                <h5 class="card-title">A方案: [手法一] 程序編程</h5>
                                 <div class="card-body">
                                     <!-- <h5 class="card-title">A方案: 程序編程</h5> -->
-                                    <h6 class="card-subtitle mb-2 text-muted">讓寫程式就像在說話一樣簡單</h6>
-                                    <div class="card-text">
-                                        Python、JavaScript、Java、C#
-                                        <br>
+                                    <!-- <h6 class="card-subtitle mb-2 text-muted">讓寫程式就像在說話一樣簡單</h6> -->
 
-                                        <div style="text-align: left;">
-                                            <ul>
-                                                <li>變數、值與型別 <span class="list-sub-text">讓程式記憶</span></li>
-                                                <li>陣列 <span class="list-sub-text">一次記憶多個資料</span></li>
-                                                <li>流程控制 <span class="list-sub-text">讓程式有思考的能力</span></li>
-                                                <li>函式 <span class="list-sub-text">封裝一段程式</span></li>
-                                                <li>註解 <span class="list-sub-text">用註解說人話</span></li>
+                                    <div class="main-desc">
+                                        <span class="main-desc-high-light">沒有一個人不會說話</span>。寫程式就像在說話，讓我們學習以「<span class="main-desc-high-light">說話</span>」的角度來看待
+                                        「<span class="main-desc-high-light">寫程式</span>」這件事，你會發現寫程式確實是如此的簡單，
+                                        「<span class="main-desc-high-light">程序編程</span>」就是在<span class="main-desc-high-light">說話</span>。
+                                    </div>
+                                    <br>
+                                    <div class="langs-desc">
+                                        一次學習 <br>
+                                        <span style="font-size: 13px;">Python、JavaScript、Java、C#</span>
+                                    </div>
+                                    <!-- <div class="main-desc">
+                                        因為，沒有人一個不會用說話的方式描述事情發生的經過，若會的話，接下來也只是把敘述的事情轉為程式而已。
+                                        你將學會透過統一的觀點，以說話的方式寫出Python、JavaScript、Java、C#不同語言的程式。
+                                    </div> -->
+                                    <div class="card-text">
+                                        <br>
+                                        <div>
+                                            <ul class="ul-context">
+                                                <li>讓程式記憶 [變數、值與型別]</li>
+                                                <li>一次記憶多個資料 [陣列] </li>
+                                                <li>讓程式有思考的能力 [流程控制] </li>
+                                                <li>封裝一段程式 [函式]</li>
+                                                <li>用註解說人話 [註解]</li>
+                                                <li>1小時教練咨詢 <del>價值 2,000</del> &nbsp;free</li>
                                                 <li>專案1 BMI計算</li>
                                                 <li>專案2 計算機</li>
                                                 <li>專案3 猜數字遊戲</li>
@@ -213,11 +273,11 @@
                                             <!-- <ul>
                                                 <li class="program-tips">程式秘笈1份，超詳細註解，無需另作筆記</li>
                                             </ul> -->
-                                            <ul>
-                                                <li class="new-langs">後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、C/C++將自動更新，無需另行付費</li>
+                                            <ul class="newlangs-ul-context">
+                                                <li>後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++將自動更新，無需另行付費</li>
                                             </ul>  
 
-                                            <span class="new-langs"></span>
+                                            
                                         </div>
 
                                         <div v-if="isFlashSale == false">
@@ -244,26 +304,42 @@
                         <!-- B方案: 物件導向 -->
                         <div class="col-12 col-sm-6">
                             <div class="card">
-                                <h5 class="card-title">B方案: 物件導向</h5>
+                                <h5 class="card-title">B方案: [手法二] 物件導向</h5>
+
+
+                                
                                 <div class="card-body">
                                     <!-- <h5 class="card-title">B方案: 物件導向</h5> -->
-                                    <h6 class="card-subtitle mb-2 text-muted">用看待世界的角度看程式</h6>
+                                    <!-- <h6 class="card-subtitle mb-2 text-muted">用看待世界的角度看程式</h6> -->
+                                    <div class="main-desc">
+                                        <span class="main-desc-high-light">將萬物虛擬到程式中</span>。
+                                        在生活中你如何對待事物，程式中就可以如何對待事物，而這只需要透過「<span class="main-desc-high-light"></span>物件導向</span>」的手法，將萬物虛擬到程式中即可。
+                                        當你學會物件導向，你會發現「<span class="main-desc-high-light">寫程式</span>」就像在「<span class="main-desc-high-light">玩積木</span>」，你將會透過「<span class="main-desc-high-light">積木</span>」打造一個「<span class="main-desc-high-light">系統</span>」。
+                                    </div>
+    
+                                    <br>
+                                    
+                                    <div class="langs-desc">
+                                        一次學習 <br>
+                                        <span style="font-size: 13px;">Python、JavaScript、Java、C#</span>
+                                    </div>
+
                                     <div class="card-text">
-                                        Python、JavaScript、Java、C#
                                         <br>
 
-                                        <div style="text-align: left;">
-                                            <ul>
-                                                <li>類別與物件 <span class="list-sub-text">讓程式虛擬萬物</span></li>
-                                                <li>繼承、多型與鴨子型別 <span class="list-sub-text">讓物件擁有多重角色</span></li>
-                                                <li>介面、協定與鴨子型別  <span class="list-sub-text">外掛物件角色</span></li>
+                                        <div>
+                                            <ul class="ul-context">
+                                                <li>讓程式虛擬萬物 [類別與物件]</li>
+                                                <li>讓物件擁有多重角色 [繼承、多型與鴨子型別]</li>
+                                                <li>外掛物件角色 [介面、協定與鴨子型別]</span></li>
+                                                <li>1小時教練咨詢 <del>價值 2,000</del> &nbsp;free</li>
                                                 <li>專案1 BMI計算 - 類別版</li>
                                                 <li>專案2 BMI計算 - 介面協定版</li>
                                                 <li>專案3 計算機 - 類別版</li>
                                                 <li>專案4 計算機 - 介面協定版</li>
                                             </ul>  
                                             <ul>
-                                                <li class="new-langs">後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、將自動更新，無需另行付費</li>
+                                                <li class="newlangs-ul-context">後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、將自動更新，無需另行付費</li>
                                             </ul>  
                                         </div>
 
@@ -290,25 +366,41 @@
                         <!-- C方案: 函式編程 -->
                         <div class="col-12 col-sm-6">
                             <div class="card">
-                                <h5 class="card-title">C方案: 函式編程</h5>
+                                <h5 class="card-title">C方案: [手法三] 函式編程</h5>
                                 <div class="card-body">
                                     <!-- <h5 class="card-title">C方案: 函式編程</h5> -->
-                                    <h6 class="card-subtitle mb-2 text-muted">用函式簡化物件導向的複雜問題</h6>
+                                    <!-- <h6 class="card-subtitle mb-2 text-muted">用函式簡化物件導向的複雜問題</h6> -->
+
+                                    <div class="main-desc">
+                                        <span class="main-desc-high-light">用數學思維程式</span>。
+                                        一個<span class="main-desc-high-light">函式</span>解決一個<span class="main-desc-high-light">問題</span>，多個函式解決多個問題，
+                                        而<span class="main-desc-high-light">系統</span>也只是<span class="main-desc-high-light">多個問題的集合</span>，這就是<span class="main-desc-high-light">函式編程</span>的理念。
+                                        同時也解決了在大型系統下<span class="main-desc-high-light">物件導向過於複雜</span>導致<span class="main-desc-high-light">失控</span>的問題。
+                                    </div>
+
+                                    <br>
+                                    
+                                    <div class="langs-desc">
+                                        一次學習 <br>
+                                        <span style="font-size: 13px;">Python、JavaScript、Java、C#</span>
+                                    </div>
+
+
                                     <div class="card-text">
-                                        Python、JavaScript、Java、C#
                                         <br>
 
                                         <div style="text-align: left;">
-                                            <ul>
-                                                <li>泛型 <span class="list-sub-text">讓程式虛擬萬物</span></li>
-                                                <li>集合 <span class="list-sub-text">讓物件擁有多重角色</span></li>
-                                                <li>Lambda  <span class="list-sub-text">外掛物件角色</span></li>
+                                            <ul class="ul-context">
+                                                <li>讓型別參數化 [泛型]</li>
+                                                <li>各式收納資料的容器 [集合]</li>
+                                                <li>用完就丟的函式 [Lambda]</li>
+                                                <li>1小時教練咨詢 <del>價值 2,000</del> &nbsp;free</li>
                                                 <li>專案1 計算機 - 函式版</li>
                                                 <li>專案2 吃雞遊戲 - 函式版</li>
                                                 <li>專案3 飲料訂製 - 函式版</li>
                                             </ul>  
-                                            <ul>
-                                                <li class="new-langs">後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、C將自動更新，無需另行付費</li>
+                                            <ul class="newlangs-ul-context">
+                                                <li>後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、C將自動更新，無需另行付費</li>
                                             </ul>  
 
                                         </div>
@@ -335,6 +427,7 @@
                         <div class="col-12 col-sm-6">
                             <div class="card">
                                 <h5 class="card-title solution-title">D方案: 
+                                    <span style='word-break: keep-all;'>[手法1+手法2+手法3]</span>
                                     <span style='word-break: keep-all;'>程序編程</span> + 
                                     <span style='word-break: keep-all;'>物件導向</span> + 
                                     <span style='word-break: keep-all;'>函式編程</span></h5>
@@ -343,49 +436,66 @@
                                     <span style='word-break: keep-all;'>程序編程</span> + 
                                     <span style='word-break: keep-all;'>物件導向</span> + 
                                     <span style='word-break: keep-all;'>函式編程</span></h5> -->
-                                <h6 class="card-subtitle mb-2 text-muted">現代程式語言的三大設計手法</h6>
+                                <!-- <h6 class="card-subtitle mb-2 text-muted">現代程式語言的三大設計手法</h6> -->
+
+                                <div class="main-desc">
+                                    <span class="main-desc-high-light">將萬物虛擬到程式中</span>。
+                                    在生活中你如何對待事物，程式中就可以如何對待事物，而這只需要透過「<span class="main-desc-high-light"></span>物件導向</span>」的手法，將萬物虛擬到程式中即可。
+                                    當你學會物件導向，你會發現「<span class="main-desc-high-light">寫程式</span>」就像在「<span class="main-desc-high-light">玩積木</span>」，你將會透過「<span class="main-desc-high-light">積木</span>」打造一個「<span class="main-desc-high-light">系統</span>」。
+                                </div>
+
+                                <br>
+                                
+                                <div class="langs-desc">
+                                    一次學習 <br>
+                                    <span style="font-size: 13px;">Python、JavaScript、Java、C#</span>
+                                </div>
+
+
                                 <div class="card-text">
-                                    Python、JavaScript、Java、C#
                                     <br>
 
 
                                     <div style="text-align: left;">
-                                        <ul>
-                                            <li>變數、值與型別 <span class="list-sub-text">讓程式記憶</span></li>
-                                            <li>陣列 <span class="list-sub-text">一次記憶多個資料</span></li>
-                                            <li>流程控制 <span class="list-sub-text">讓程式有思考的能力</span></li>
-                                            <li>函式 <span class="list-sub-text">封裝一段程式</span></li>
-                                            <li>註解 <span class="list-sub-text">用註解說人話</span></li>
+                                        <ul class="ul-context">
+                                            <li>讓程式記憶 [變數、值與型別]</li>
+                                            <li>一次記憶多個資料 [陣列] </li>
+                                            <li>讓程式有思考的能力 [流程控制] </li>
+                                            <li>封裝一段程式 [函式]</li>
+                                            <li>用註解說人話 [註解]</li>
                                             <li>專案1 BMI計算</li>
                                             <li>專案2 計算機</li>
                                             <li>專案3 猜數字遊戲</li>
                                         </ul>  
 
                                     
-                                        <ul>
-                                            <li>類別與物件 <span class="list-sub-text">讓程式虛擬萬物</span></li>
-                                            <li>繼承、多型與鴨子型別 <span class="list-sub-text">讓物件擁有多重角色</span></li>
-                                            <li>介面、協定與鴨子型別  <span class="list-sub-text">外掛物件角色</span></li>
+                                        <ul class="ul-context">
+                                            <li>讓程式虛擬萬物 [類別與物件]</li>
+                                            <li>讓物件擁有多重角色 [繼承、多型與鴨子型別]</li>
+                                            <li>外掛物件角色 [介面、協定與鴨子型別]</span></li>
                                             <li>專案1 BMI計算 - 類別版</li>
                                             <li>專案2 BMI計算 - 介面協定版</li>
                                             <li>專案3 計算機 - 類別版</li>
                                             <li>專案4 計算機 - 介面協定版</li>
-                                        </ul>
-                                    
+                                        </ul>  
 
                                     
-                                        <ul>
-                                            <li>泛型 <span class="list-sub-text">讓程式虛擬萬物</span></li>
-                                            <li>集合 <span class="list-sub-text">讓物件擁有多重角色</span></li>
-                                            <li>Lambda  <span class="list-sub-text">外掛物件角色</span></li>
+                                        <ul class="ul-context">
+                                            <li>讓型別參數化 [泛型]</li>
+                                            <li>各式收納資料的容器 [集合]</li>
+                                            <li>用完就丟的函式 [Lambda]</li>
                                             <li>專案1 計算機 - 函式版</li>
                                             <li>專案2 吃雞遊戲 - 函式版</li>
                                             <li>專案3 飲料訂製 - 函式版</li>
+                                        </ul>  
+
+                                        <ul class="ul-context">
+                                            <li>3小時教練咨詢 <del>價值 6,000</del> &nbsp;free</li>
                                         </ul>
 
-                                        <ul>
-                                            <li class="new-langs">後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、C/將自動更新，無需另行付費</li>
-                                        </ul>
+                                        <ul class="newlangs-ul-context">
+                                            <li>後續預計新增程式語言TypeScript、Golang、Kotlin、Swift、C/C++、C將自動更新，無需另行付費</li>
+                                        </ul>  
                                     </div>
 
                                     <div v-if="isFlashSale == false">
@@ -458,7 +568,13 @@
 
                 <!-- 7.與我聊聊 -->
                 <h1>與我聊聊</h1>
-                <div style="margin-bottom: 10px;">不確定自已要什麼? 遇到瓶頸不知如何是好? <br> 有些問題想解決? 讓我們聊聊吧 </div>
+                <div style="margin-bottom: 10px;">
+                    這門課對我有幫助嗎?
+                    不確定自已要什麼?<br>
+                    遇到瓶頸不知如何是好?
+                    有些問題想解決?<br>
+                    讓我們聊聊吧!
+                </div>
                 <a class="talk-btn" target="_blank" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1KBWQ0_MHFaBtYHft-nmyJJlxpOkAMG91yAaLsg84sY2yUhYrSq88H86NFVr-sCX9S0DJrAfe5">
                     <span style="color: red; font-weight: bolder;">Help!!!</span> 預約咨詢
                 </a>
@@ -491,7 +607,7 @@
                 ,
                 remainTimeString: ''
                 ,
-                isAlreadyToLearn: false
+                isAlreadyToLearn: true
                 ,
                 gifts: [
                     {key: "aaa", secrets: ["1+1週學會一個程式語言"], name: "JavaScript第1章變數", url: "https://lokanghung.github.io/pdfs/js_lite/01_var.pdf"},
