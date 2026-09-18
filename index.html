@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
   <title>鴻運算 AI STUDIO ‧ 極速 AI 驅動開發</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     rel="stylesheet" />
@@ -105,7 +106,19 @@
 
   <!-- ================= MOBILE TOP NAVIGATION (HEADER) ================= -->
   <header
-    class="block md:hidden fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-variant/70 shadow-[0_1px_12px_rgba(20,27,60,0.04)]">
+    class="block lg:hidden fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-variant/70 shadow-[0_1px_12px_rgba(20,27,60,0.04)]">
+    <!-- 頂部品牌 Slogan 通欄公告條 (行動版 方案 B) -->
+    <div
+      class="w-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white py-1 px-3 text-center border-b border-white/10 shadow-xs">
+      <div class="flex items-center justify-center gap-1.5 font-sans text-[11px] font-bold tracking-tight">
+        <span
+          class="inline-flex items-center gap-1 px-1.5 py-0.2 rounded-full bg-white/20 text-white text-[9px] font-black shadow-xs shrink-0">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-300 animate-pulse"></span>
+          雙 7 OFF
+        </span>
+        <span class="font-extrabold tracking-tight truncate">「雙 7 OFF，讓您時間、成本 70% OFF」</span>
+      </div>
+    </div>
     <div class="max-w-lg mx-auto">
       <div class="h-16 px-4 flex items-center justify-between gap-2">
         <div class="flex items-center gap-2.5 min-w-0 flex-1">
@@ -137,46 +150,59 @@
           </button>
         </div>
       </div>
-      <!-- Quick Anchor Navigation Strip for Mobile -->
+      <!-- Quick Anchor Navigation Strip for Mobile (依目前版面動線排序) -->
       <div
         class="w-full overflow-x-auto border-t border-surface-variant/60 py-2 px-3 bg-surface-container-low/80 flex items-center gap-1.5 text-nowrap scrollbar-none">
         <a class="px-3 py-1 rounded-full text-[12px] font-mono font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
-          href="#pain-points-m">創業痛點</a>
-        <a class="px-3 py-1 rounded-full text-[12px] font-mono font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
-          href="#advantages-m">解決方案</a>
-        <a class="px-3 py-1 rounded-full text-[12px] font-mono font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
           href="#deliverables-m">免費體驗</a>
+        <a class="px-2.5 py-1 rounded-full text-[12px] font-mono font-bold text-primary bg-primary/10 border border-primary/25 hover:bg-primary-fixed/50 flex items-center gap-1 shadow-xs transition-all"
+          href="#advantages-m">
+          <span class="material-symbols-outlined text-[13px] text-primary">bolt</span>
+          <span>雙引擎</span>
+          <span
+            class="px-2 py-0.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-[10px] font-black tracking-tight leading-none shadow-xs">雙
+            7 OFF</span>
+        </a>
         <a class="px-3 py-1 rounded-full text-[12px] font-mono font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
-          href="#demo-m">系統展示</a>
+          href="#pain-points-m">AI陷阱</a>
         <a class="px-3 py-1 rounded-full text-[12px] font-mono font-medium text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+          href="#demo-m">體驗成果</a>
+        <a class="px-3 py-1 rounded-full text-[12px] font-mono font-bold text-primary bg-primary-fixed/50 hover:bg-primary-fixed transition-all"
           href="#cta">免費開始</a>
       </div>
-      <!-- Mobile Dropdown Nav Menu -->
+      <!-- Mobile Dropdown Nav Menu (同步最新順序) -->
       <div class="hidden flex-col gap-2 p-4 bg-surface-container-lowest border-b border-surface-variant shadow-lg"
         id="mobile-nav-panel">
-        <a class="flex items-center justify-between py-2 px-3 rounded-xl hover:bg-surface-container text-sm font-sans font-semibold text-on-surface"
-          href="#pain-points-m">
-          <span>創業痛點</span>
-          <span class="material-symbols-outlined text-[18px] text-outline">arrow_forward</span>
-        </a>
-        <a class="flex items-center justify-between py-2 px-3 rounded-xl hover:bg-surface-container text-sm font-sans font-semibold text-on-surface"
-          href="#advantages-m">
-          <span>解決方案</span>
-          <span class="material-symbols-outlined text-[18px] text-outline">arrow_forward</span>
-        </a>
         <a class="flex items-center justify-between py-2 px-3 rounded-xl hover:bg-surface-container text-sm font-sans font-semibold text-on-surface"
           href="#deliverables-m">
           <span>免費體驗</span>
           <span class="material-symbols-outlined text-[18px] text-outline">arrow_forward</span>
         </a>
         <a class="flex items-center justify-between py-2 px-3 rounded-xl hover:bg-surface-container text-sm font-sans font-semibold text-on-surface"
+          href="#advantages-m">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-primary flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px] text-primary">bolt</span>雙引擎
+            </span>
+            <span
+              class="px-2 py-0.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-mono text-[10px] font-black shadow-xs">雙
+              7 OFF</span>
+          </div>
+          <span class="material-symbols-outlined text-[18px] text-outline">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between py-2 px-3 rounded-xl hover:bg-surface-container text-sm font-sans font-semibold text-on-surface"
+          href="#pain-points-m">
+          <span>AI陷阱</span>
+          <span class="material-symbols-outlined text-[18px] text-outline">arrow_forward</span>
+        </a>
+        <a class="flex items-center justify-between py-2 px-3 rounded-xl hover:bg-surface-container text-sm font-sans font-semibold text-on-surface"
           href="#demo-m">
-          <span>系統展示</span>
+          <span>體驗成果</span>
           <span class="material-symbols-outlined text-[18px] text-outline">arrow_forward</span>
         </a>
         <a class="flex items-center justify-between py-2.5 px-3 rounded-xl bg-primary text-white font-sans font-semibold text-sm shadow-md"
           href="#cta">
-          <span>免費獲得專屬規格書</span>
+          <span>免費獲得規格與原型</span>
           <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
         </a>
       </div>
@@ -185,9 +211,29 @@
 
   <!-- ================= DESKTOP TOP NAVIGATION (HEADER) ================= -->
   <header
-    class="hidden md:block fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-variant/70 shadow-[0_1px_16px_rgba(20,27,60,0.05)]">
+    class="hidden lg:block fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-variant/70 shadow-[0_1px_16px_rgba(20,27,60,0.06)]">
+    <!-- 頂部品牌 Slogan 通欄公告條 (方案 B) -->
+    <div
+      class="w-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white py-1.5 px-4 text-center border-b border-white/10 shadow-xs">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-center gap-2.5 font-sans text-xs lg:text-[13px] font-bold tracking-wide">
+        <span
+          class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/20 text-white text-[11px] font-black shadow-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-300 animate-pulse"></span>
+          雙 7 OFF
+        </span>
+        <span class="font-extrabold tracking-tight">「雙 7 OFF，讓您時間、成本 70% OFF」</span>
+        <span class="text-white/60 font-normal">｜</span>
+        <span class="text-amber-200 font-bold">最快 14 天交付 ‧ 現省 15-30 萬 ‧ 歡迎全台盡情比價</span>
+        <a href="#deliverables"
+          class="inline-flex items-center gap-0.5 text-white underline underline-offset-2 hover:text-amber-300 transition-colors font-extrabold ml-1">
+          <span>了解詳情</span>
+          <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="h-16 lg:h-20 flex items-center justify-between gap-4">
+      <div class="h-16 lg:h-18 flex items-center justify-between gap-4">
         <!-- Brand Logo -->
         <a class="flex items-center gap-3 shrink-0 group" href="#">
           <div
@@ -203,20 +249,27 @@
                 class="font-mono text-[10px] font-bold uppercase tracking-wider text-primary px-2 py-0.5 rounded-full bg-primary-fixed/70 border border-primary-fixed-dim">AI
                 STUDIO</span>
             </div>
-            <span class="text-[10px] font-mono text-on-surface-variant hidden sm:inline-block">極速 AI 驅動開發</span>
+            <span class="text-[10px] font-sans font-bold text-primary hidden sm:inline-block">雙 7 OFF ‧ 時間、成本 70%
+              OFF</span>
           </div>
         </a>
         <!-- Desktop Nav Links -->
         <nav class="flex items-center gap-1 lg:gap-2">
           <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
-            href="#pain-points">創業痛點</a>
-          <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
-            href="#advantages">解決方案</a>
-          <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
             href="#deliverables">免費體驗</a>
+          <a class="px-3 py-1.5 rounded-full text-sm font-sans font-bold text-primary bg-primary/10 border border-primary/25 hover:bg-primary-fixed/50 flex items-center gap-1.5 shadow-xs transition-all"
+            href="#advantages">
+            <span class="material-symbols-outlined text-[15px] text-primary">bolt</span>
+            <span>雙引擎</span>
+            <span
+              class="px-2 py-0.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-[11px] font-black tracking-tight leading-none shadow-xs">雙
+              7 OFF</span>
+          </a>
           <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
-            href="#demo">系統展示</a>
+            href="#pain-points">AI陷阱</a>
           <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+            href="#demo">體驗成果</a>
+          <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-bold text-primary bg-primary-fixed/50 hover:bg-primary-fixed transition-all"
             href="#cta">免費開始</a>
         </nav>
         <!-- CTA Button -->
@@ -224,7 +277,9 @@
           <a class="inline-flex h-10 px-5 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-xs lg:text-sm font-bold tracking-wide items-center gap-2 transition-all shadow-md shadow-primary/25 active:scale-95 hover:brightness-105"
             href="#cta">
             <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-            免費諮詢評估
+            <span>免費取得規格與原型，讓您盡情<span
+                class="text-amber-300 font-black px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+              →</span>
           </a>
         </div>
       </div>
@@ -232,218 +287,274 @@
   </header>
 
   <!-- ================= MAIN CONTENT WRAPPER ================= -->
-  <main class="flex-1 flex flex-col relative w-full pt-28 md:pt-20 lg:pt-28">
+  <main class="flex-1 flex flex-col relative w-full pt-44 sm:pt-48 lg:pt-32">
 
-    <!-- ================= MOBILE VIEW CONTENT (max-w-lg) ================= -->
-    <div class="block md:hidden max-w-lg mx-auto w-full overflow-x-hidden">
+    <!-- ================= MOBILE & TABLET VIEW CONTENT (max-w-lg / md:max-w-2xl) ================= -->
+    <div class="block lg:hidden max-w-lg md:max-w-2xl mx-auto w-full overflow-x-hidden">
       <!-- SECTION 01: HERO 行動版迎賓區 -->
-      <section class="relative px-4 pt-2 pb-10 flex flex-col items-center text-center overflow-hidden">
+      <section class="relative px-4 pt-10 sm:pt-12 pb-10 flex flex-col items-center text-center overflow-hidden">
         <div
           class="absolute -top-10 left-1/2 -translate-x-1/2 w-[340px] h-[340px] bg-gradient-to-b from-primary-fixed/70 via-surface-container-high/30 to-transparent rounded-full blur-3xl pointer-events-none -z-10">
         </div>
-        <div
-          class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-[11px] font-bold mb-4 shadow-sm">
+        <!-- <div
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-rose-500/15 via-primary/10 to-secondary/15 border border-rose-500/30 text-rose-600 font-sans text-xs font-black mb-3 shadow-sm">
           <span class="flex h-2 w-2 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-500 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
           </span>
-          鴻運算 ‧ AI智能體
-        </div>
-        <h1 class="font-sans text-[32px] sm:text-[36px] font-black tracking-tight text-on-surface leading-[1.25] mb-2">
-          想創業，<br />
+          <span>🔥 雙 7 OFF</span>
+          <span class="text-on-surface-variant font-normal">‧</span>
+          <span class="text-primary font-bold">新創打造網站與App</span>
+        </div> -->
+        <h1 class="font-sans text-[28px] sm:text-[34px] font-black tracking-tight text-on-surface leading-[1.3] mb-2.5">
           <span
-            class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">卻被開發卡住？</span>
+            class="inline-block bg-gradient-to-r from-rose-600 via-primary to-secondary text-white px-3 py-1 rounded-2xl shadow-lg shadow-rose-600/25 text-[24px] sm:text-[30px] font-black mr-1 align-middle border-2 border-white leading-none whitespace-nowrap">雙
+            7 OFF</span>極速啟動<br />
+          <span
+            class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">打造網站App</span>
         </h1>
-        <p class="font-sans text-[14px] text-on-surface-variant font-medium mb-6 leading-relaxed">
-          白話需求 ➜ AI 14天極速交付，省下 50% 開發成本
+        <!-- 核心品牌 Slogan (行動版) -->
+        <p class="font-sans text-[15px] sm:text-base font-black tracking-tight text-on-surface mb-4">
+          「雙 7 OFF，讓您時間、成本 <span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent font-black">70% OFF</span>」
         </p>
+        <!-- Mobile Hero Visual with Overlaid Dual-7 Information (White Background & Enlarged Text) -->
         <div
-          class="w-full relative rounded-3xl overflow-hidden shadow-[0_12px_36px_rgba(20,27,60,0.12)] border border-surface-variant/80 bg-surface-container-lowest mb-5 group">
-          <div class="aspect-[4/4.8] w-full overflow-hidden relative">
-            <img alt="創業者手持成功產品於現代科技辦公室"
-              class="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-500"
-              src="images/img_081_247b05c392.jpg" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
-            <div
-              class="absolute top-3.5 right-3.5 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-surface-variant/80 shadow-md flex items-center gap-1.5 text-primary font-mono text-[11px] font-bold">
-              <span class="material-symbols-outlined text-[15px] text-primary">bolt</span>
-              最快 14 天交付
+          class="w-full relative rounded-3xl overflow-hidden shadow-[0_16px_40px_rgba(20,27,60,0.14)] border border-surface-variant/80 bg-surface-container-lowest mb-4 group">
+          <div class="aspect-[16/10] w-full overflow-hidden relative">
+            <img alt="新創創業者於現代科技辦公室展示網站與App成果"
+              class="w-full h-full object-cover object-[center_15%] group-hover:scale-102 transition-transform duration-500"
+              src="images/hero_male_founder.jpg" />
+            <!-- Enhanced Dark Scrim for High Contrast against White Cards -->
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-slate-950/15"></div>
+
+            <!-- Top Corner Micro-Badges -->
+            <div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none z-10">
+              <span
+                class="px-3 py-1 rounded-full bg-gradient-to-r from-rose-600 to-primary shadow-lg text-white font-sans text-[11px] sm:text-xs font-black tracking-wide border border-white/40 flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px] text-amber-300">local_fire_department</span>
+                雙 7 OFF 極速保證
+              </span>
+              <span
+                class="px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md border border-white shadow-md text-slate-800 font-sans text-[11px] font-bold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                新創極速上線
+              </span>
             </div>
-            <div class="absolute bottom-3.5 left-3.5 right-3.5 flex flex-col gap-2 text-left">
-              <div class="flex items-center gap-2">
-                <span
-                  class="px-2.5 py-1 rounded-full bg-emerald-500/90 text-white font-mono text-[10px] font-extrabold tracking-wider backdrop-blur-sm shadow-sm">AI
-                  極速落地</span>
-                <span
-                  class="px-2.5 py-1 rounded-full bg-white/20 text-white font-mono text-[10px] font-medium backdrop-blur-sm">零技術門檻</span>
-              </div>
+
+            <!-- Overlaid Information Directly on the Picture: 白底 + 字改大好處 -->
+            <div class="absolute inset-x-2.5 bottom-2.5 grid grid-cols-2 gap-2 text-left">
+              <!-- Benefit 1: 時間 -->
               <div
-                class="bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-3 border border-white/60 shadow-lg flex items-center justify-between">
-                <div class="flex items-center gap-2.5">
-                  <div
-                    class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-container text-white flex items-center justify-center shadow-sm">
-                    <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
-                  </div>
-                  <div>
-                    <div class="font-sans text-[13px] font-extrabold text-on-surface">14 天閃電交付 ‧ 成果全歸您</div>
-                    <div class="font-mono text-[11px] text-primary font-semibold">省 50% 開發成本 ‧ 規格完全透明</div>
-                  </div>
+                class="p-2.5 sm:p-3.5 rounded-2xl bg-white shadow-[0_12px_28px_rgba(0,0,0,0.35)] border-2 border-white flex flex-col items-center text-center">
+                <div
+                  class="font-sans text-[16px] sm:text-[18px] font-black text-slate-900 tracking-tight leading-tight flex items-center justify-center gap-0.5 whitespace-nowrap">
+                  <span class="material-symbols-outlined text-[19px] text-primary shrink-0">bolt</span>
+                  <span>節省 <span class="text-primary text-[20px] sm:text-[22px] font-black">70%</span> 時間</span>
                 </div>
-                <span class="material-symbols-outlined text-primary text-[20px] shrink-0">check_circle</span>
+                <div
+                  class="mt-1 font-sans text-[12px] sm:text-[13px] font-black text-primary bg-primary/10 px-2.5 py-0.5 rounded-full text-center tracking-tight">
+                  最快 14 天交付
+                </div>
+                <div class="text-[10px] font-mono text-slate-500 mt-0.5">告別 3~6 個月等待</div>
+              </div>
+
+              <!-- Benefit 2: 資金 -->
+              <div
+                class="p-2.5 sm:p-3.5 rounded-2xl bg-white shadow-[0_12px_28px_rgba(0,0,0,0.35)] border-2 border-white flex flex-col items-center text-center">
+                <div
+                  class="font-sans text-[16px] sm:text-[18px] font-black text-slate-900 tracking-tight leading-tight flex items-center justify-center gap-0.5 whitespace-nowrap">
+                  <span class="material-symbols-outlined text-[19px] text-emerald-600 shrink-0">savings</span>
+                  <span>節省 <span class="text-emerald-700 text-[20px] sm:text-[22px] font-black">70%</span> 資金</span>
+                </div>
+                <div
+                  class="mt-1 font-sans text-[12px] sm:text-[13px] font-black text-emerald-800 bg-emerald-100/80 px-2.5 py-0.5 rounded-full text-center tracking-tight">
+                  省下 15-30 萬
+                </div>
+                <div class="text-[10px] font-mono text-slate-500 mt-0.5">砍掉傳統外包暴利</div>
               </div>
             </div>
           </div>
         </div>
-        <a class="w-full min-h-[48px] py-3.5 px-6 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-[15px] font-bold flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
+        <a class="w-full min-h-[48px] py-3.5 px-4 sm:px-6 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-[14px] sm:text-[15px] font-bold flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
           href="#cta">
-          <span>立即免費開始你的創業想法 →</span>
+          <span class="w-2 h-2 rounded-full bg-white animate-ping shrink-0"></span>
+          <span>免費取得規格與原型，讓您盡情<span
+              class="text-amber-300 font-black text-[15px] sm:text-[16px] px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+            →</span>
+        </a>
+        <div class="flex items-center justify-around w-full text-[11px] font-mono text-on-surface-variant pt-2">
+          <span class="flex items-center gap-1"><span
+              class="material-symbols-outlined text-[14px] text-emerald-600">check_circle</span>白話講需求</span>
+          <span class="flex items-center gap-1"><span
+              class="material-symbols-outlined text-[14px] text-emerald-600">check_circle</span>14天閃電交付</span>
+          <span class="flex items-center gap-1"><span
+              class="material-symbols-outlined text-[14px] text-emerald-600">check_circle</span>原始碼全歸您</span>
+        </div>
+      </section>
+
+      <!-- SECTION 01: 行動版免費體驗 (直接呼應 Hero 比價承諾) -->
+      <section
+        class="px-4 py-11 flex flex-col gap-6 bg-surface-container-low/70 border-t border-surface-variant/70 scroll-mt-24"
+        id="deliverables-m">
+        <div class="flex flex-col gap-1.5 text-center items-center">
+          <!-- <div
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-[11px] font-bold tracking-wider uppercase shadow-sm">
+            <span class="material-symbols-outlined text-[14px]">verified</span>免費體驗 ‧ 盡情比價
+          </div> -->
+          <h2 class="font-sans text-[26px] sm:text-[28px] text-on-surface font-extrabold leading-snug">
+            只要給我們一段話<br />
+            <span
+              class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">免費交付兩大成果，讓您盡情比價</span>
+          </h2>
+          <p class="font-sans text-[13px] text-on-surface-variant max-w-xs leading-relaxed">
+            100% 免費 ‧ 零綁定 ‧ 拿到後歡迎拿去全台比價
+          </p>
+        </div>
+        <!-- 實景圖片展示區 (流程區塊直接浮在圖上，減少版面高度) -->
+        <div
+          class="w-full relative rounded-3xl overflow-hidden shadow-[0_10px_32px_rgba(20,27,60,0.1)] border border-surface-variant/90 bg-surface-container-lowest group">
+          <div class="w-full aspect-[16/11] overflow-hidden relative">
+            <img alt="創業者白話對話與 AI 智能解析藍圖情境圖"
+              class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
+              src="images/img_006_db5d93ffbd.jpg" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-slate-950/10"></div>
+
+            <!-- Top Badges -->
+            <div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none z-10">
+              <span
+                class="bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-full border border-surface-variant/80 shadow-sm flex items-center gap-1.5 text-primary font-mono text-[10px] font-bold">
+                <span class="material-symbols-outlined text-[13px] text-primary">chat_bubble</span>白話需求 ➜ 規格與原型
+              </span>
+              <span
+                class="bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full border border-white shadow-sm text-slate-900 font-sans text-[10px] font-bold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                盡情<span
+                  class="text-amber-950 bg-amber-300 px-1 py-0.2 rounded font-black border border-amber-400/80">比價</span>
+              </span>
+            </div>
+
+            <!-- 浮在圖上的 1-2-3 流程區塊 -->
+            <div
+              class="absolute inset-x-2.5 bottom-2.5 grid grid-cols-3 gap-1.5 text-center p-2.5 rounded-2xl bg-white/95 backdrop-blur-md border border-white shadow-[0_8px_24px_rgba(0,0,0,0.3)] z-20">
+              <div class="flex flex-col items-center gap-0.5">
+                <div
+                  class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-[11px] font-mono">
+                  1</div>
+                <span class="font-sans text-[11px] font-black text-slate-900 leading-tight">說出想法</span>
+                <span class="font-mono text-[9px] text-slate-500">一句白話需求</span>
+              </div>
+              <div class="flex flex-col items-center gap-0.5 relative">
+                <div
+                  class="w-6 h-6 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-[11px] font-mono">
+                  2</div>
+                <span class="font-sans text-[11px] font-black text-slate-900 leading-tight">AI 智能解析</span>
+                <span class="font-mono text-[9px] text-purple-700 font-bold">自動轉架構</span>
+              </div>
+              <div class="flex flex-col items-center gap-0.5">
+                <div
+                  class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-[11px] font-mono">
+                  3</div>
+                <span class="font-sans text-[11px] font-black text-slate-900 leading-tight">2 份成果</span>
+                <span class="font-sans text-[9px] text-emerald-800 font-black flex items-center justify-center gap-0.5">
+                  免費<span
+                    class="text-amber-950 bg-amber-300 px-1 py-0.2 rounded font-black border border-amber-400/80 shadow-xs">比價</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 兩大成果卡 (雙欄) -->
+        <div class="grid grid-cols-2 gap-3">
+          <!-- Left: 01 專屬系統規格書 -->
+          <div
+            class="p-3.5 rounded-2xl bg-gradient-to-b from-blue-50/80 to-surface-container-lowest border-2 border-blue-600/30 shadow-[0_4px_16px_rgba(37,99,235,0.08)] flex flex-col justify-between relative overflow-hidden group">
+            <div class="flex flex-col gap-2.5 relative z-10">
+              <div class="flex items-center justify-between gap-1">
+                <span
+                  class="w-7 h-7 rounded-xl bg-blue-600 text-white font-mono text-[11px] font-black flex items-center justify-center shadow-md shadow-blue-600/30">01</span>
+                <span
+                  class="px-2 py-0.5 rounded-full bg-blue-600 text-white font-mono text-[9px] font-bold tracking-tight shadow-sm">核心重點</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1.5 text-blue-600">
+                  <span class="material-symbols-outlined text-[22px]">description</span>
+                  <h3 class="font-sans text-[18px] sm:text-[22px] font-black text-blue-600 leading-tight">專屬系統規格書</h3>
+                </div>
+                <div class="inline-flex flex-col bg-blue-100/70 border border-blue-200 rounded-xl px-2 py-1.5 mt-0.5">
+                  <span class="font-mono text-[9px] text-blue-700 font-bold uppercase tracking-wider">市場合約價值</span>
+                  <span class="font-mono text-[14px] font-black text-blue-950 leading-none mt-0.5">NT$ 30,000+</span>
+                </div>
+              </div>
+              <p class="font-sans text-[11px] text-on-surface-variant leading-relaxed">
+                白話轉為標準架構與資料表設計，可直接拿去發包比價。
+              </p>
+            </div>
+            <div
+              class="mt-2 pt-2 border-t border-blue-200/60 flex items-center gap-1 text-blue-700 font-mono text-[10px] font-bold">
+              <span class="material-symbols-outlined text-[13px] text-blue-600 shrink-0">check_circle</span>
+              <span class="truncate">完整交付 ‧ 0元收費</span>
+            </div>
+          </div>
+
+          <!-- Right: 02 UI/UX 原型設計 -->
+          <div
+            class="p-3.5 rounded-2xl bg-surface-container-lowest border border-purple-200/80 shadow-sm flex flex-col justify-between relative overflow-hidden group">
+            <div class="flex flex-col gap-2.5 relative z-10">
+              <div class="flex items-center justify-between gap-1">
+                <span
+                  class="w-7 h-7 rounded-xl bg-purple-600 text-white font-mono text-[11px] font-black flex items-center justify-center shadow-md shadow-purple-600/30">02</span>
+                <span
+                  class="px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-mono text-[9px] font-bold">互動展示</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1.5 text-purple-600">
+                  <span class="material-symbols-outlined text-[22px]">devices</span>
+                  <h3 class="font-sans text-[18px] sm:text-[22px] font-black text-purple-600 leading-tight">UI/UX 原型設計
+                  </h3>
+                </div>
+                <div
+                  class="inline-flex flex-col bg-purple-50 border border-purple-200/80 rounded-xl px-2 py-1.5 mt-0.5">
+                  <span class="font-mono text-[9px] text-purple-700 font-bold uppercase tracking-wider">市場合約價值</span>
+                  <span class="font-mono text-[14px] font-black text-purple-950 leading-none mt-0.5">NT$ 50,000</span>
+                </div>
+              </div>
+              <p class="font-sans text-[11px] text-on-surface-variant leading-relaxed">
+                高擬真可點擊介面，方便團隊簡報與發包比價。
+              </p>
+            </div>
+            <div
+              class="mt-2 pt-2 border-t border-purple-200/60 flex items-center gap-1 text-purple-700 font-mono text-[10px] font-bold">
+              <span class="material-symbols-outlined text-[13px] text-purple-600 shrink-0">check_circle</span>
+              <span class="truncate">可點擊原型 ‧ 支援演示</span>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Shortcut CTA Button -->
+        <a class="w-full min-h-[48px] mt-2 py-3.5 px-4 sm:px-6 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-[14px] sm:text-[15px] font-bold flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
+          href="#cta">
+          <span class="w-2 h-2 rounded-full bg-white animate-ping shrink-0"></span>
+          <span>免費取得規格與原型，讓您盡情<span
+              class="text-amber-300 font-black text-[15px] sm:text-[16px] px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+            →</span>
         </a>
       </section>
 
-      <!-- SECTION 01: 行動版痛點圖文卡 -->
-      <section
-        class="px-4 py-11 flex flex-col gap-6 bg-surface-container-low/60 border-t border-surface-variant/70 scroll-mt-24"
-        id="pain-points-m">
+      <!-- SECTION 02: 行動版核心優勢 / 解決方案 (緊接在免費體驗後，展現雙 7 OFF 的實力) -->
+      <section class="px-4 py-11 flex flex-col gap-6 bg-background scroll-mt-24 border-t border-surface-variant/70"
+        id="advantages-m">
         <div class="flex flex-col gap-1.5 text-center items-center">
-          <div
+          <!-- <div
             class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-[11px] font-bold tracking-wider uppercase shadow-sm">
-            <span class="material-symbols-outlined text-[14px]">help_outline</span>3個核心痛點
-          </div>
-          <h2 class="font-sans text-[26px] sm:text-[28px] text-on-surface font-extrabold tracking-tight">創業痛點？</h2>
-          <p class="font-sans text-[13px] text-on-surface-variant max-w-xs">
-            多數優秀想法，常卡在這三道關卡前
-          </p>
-        </div>
-        <div class="flex flex-col gap-6 pt-1">
-          <!-- PAIN CARD 01 -->
-          <div
-            class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-[0_6px_24px_rgba(20,27,60,0.06)] overflow-hidden flex flex-col group transition-all">
-            <div class="relative w-full aspect-[16/10]">
-              <div class="absolute inset-0 bg-surface-container overflow-hidden">
-                <img alt="不懂技術，規格說不清"
-                  class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
-                  src="images/img_082_a239577df1.jpg" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-              <div
-                class="absolute top-3.5 left-3.5 z-10 w-10 h-10 rounded-2xl bg-blue-600 text-white font-mono text-base font-black flex items-center justify-center shadow-lg shadow-blue-600/30">
-                01</div>
-              <div
-                class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-[0_4px_16px_rgba(37,99,235,0.4)] ring-4 ring-white">
-                <span class="material-symbols-outlined text-[24px]">code</span>
-              </div>
-            </div>
-            <div class="pt-8 px-5 pb-5 flex flex-col gap-2.5 text-center items-center">
-              <h3 class="font-sans text-[19px] text-on-surface font-extrabold tracking-tight">不懂技術，規格說不清</h3>
-              <p class="font-sans text-[13px] text-on-surface-variant leading-relaxed text-center">
-                非工程背景難跟工程師溝通，外包溝通處處踩雷，做出來跟想的不一樣。
-              </p>
-              <div
-                class="w-full mt-1.5 p-3 rounded-2xl bg-blue-50 border border-blue-200/80 flex items-start gap-2 text-left">
-                <span class="text-blue-600 font-bold text-sm shrink-0 mt-0.5">✨</span>
-                <div class="text-[12px] font-sans leading-relaxed text-blue-950">
-                  <span class="font-bold text-blue-700">鴻運算解法：</span>白話描述即可，AI 自動轉成標準規格書。
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- PAIN CARD 02 -->
-          <div
-            class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-[0_6px_24px_rgba(20,27,60,0.06)] overflow-hidden flex flex-col group transition-all">
-            <div class="relative w-full aspect-[16/10]">
-              <div class="absolute inset-0 bg-surface-container overflow-hidden">
-                <img alt="開發太慢，錯過黃金期"
-                  class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
-                  src="images/img_083_5a6c8c4b47.jpg" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-              <div
-                class="absolute top-3.5 left-3.5 z-10 w-10 h-10 rounded-2xl bg-purple-600 text-white font-mono text-base font-black flex items-center justify-center shadow-lg shadow-purple-600/30">
-                02</div>
-              <div
-                class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30 w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center shadow-[0_4px_16px_rgba(147,51,234,0.4)] ring-4 ring-white">
-                <span class="material-symbols-outlined text-[24px]">hourglass_empty</span>
-              </div>
-            </div>
-            <div class="pt-8 px-5 pb-5 flex flex-col gap-2.5 text-center items-center">
-              <h3 class="font-sans text-[19px] text-on-surface font-extrabold tracking-tight">開發太慢，錯過黃金期</h3>
-              <p class="font-sans text-[13px] text-on-surface-variant leading-relaxed text-center">
-                傳統外包動輒 3~6 個月，等系統做出來，競品早已搶占先機。
-              </p>
-              <div
-                class="w-full mt-1.5 p-3 rounded-2xl bg-purple-50 border border-purple-200/80 flex items-start gap-2 text-left">
-                <span class="text-purple-600 font-bold text-sm shrink-0 mt-0.5">⚡</span>
-                <div class="text-[12px] font-sans leading-relaxed text-purple-950">
-                  <span class="font-bold text-purple-700">鴻運算解法：</span>AI 流水線開發，最快 14 天交付上線。
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- PAIN CARD 03 -->
-          <div
-            class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-[0_6px_24px_rgba(20,27,60,0.06)] overflow-hidden flex flex-col group transition-all">
-            <div class="relative w-full aspect-[16/10]">
-              <div class="absolute inset-0 bg-surface-container overflow-hidden">
-                <img alt="成本太高，動輒幾十萬起跳"
-                  class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
-                  src="images/img_084_9c5346e0e7.jpg" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-              <div
-                class="absolute top-3.5 left-3.5 z-10 w-10 h-10 rounded-2xl bg-amber-600 text-white font-mono text-base font-black flex items-center justify-center shadow-lg shadow-amber-600/30">
-                03</div>
-              <div
-                class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30 w-12 h-12 rounded-full bg-amber-600 text-white flex items-center justify-center shadow-[0_4px_16px_rgba(217,119,6,0.4)] ring-4 ring-white">
-                <span class="material-symbols-outlined text-[24px]">payments</span>
-              </div>
-            </div>
-            <div class="pt-8 px-5 pb-5 flex flex-col gap-2.5 text-center items-center">
-              <h3 class="font-sans text-[19px] text-on-surface font-extrabold tracking-tight">成本太高，動輒幾十萬起跳</h3>
-              <p class="font-sans text-[13px] text-on-surface-variant leading-relaxed text-center">
-                傳統外包與組團隊動輒數十萬起跳，預算燒光產品還沒上線。
-              </p>
-              <div
-                class="w-full mt-1.5 p-3 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-start gap-2 text-left">
-                <span class="text-amber-600 font-bold text-sm shrink-0 mt-0.5">💰</span>
-                <div class="text-[12px] font-sans leading-relaxed text-amber-950">
-                  <span class="font-bold text-amber-700">鴻運算解法：</span>人機協同省人力，首期現省 15-30 萬。
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Quote Box: 核心信仰 -->
-        <div
-          class="mt-2 w-full p-5 rounded-3xl bg-gradient-to-br from-primary via-primary-container to-secondary text-white relative overflow-hidden shadow-xl shadow-primary/20">
-          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-white/10 rounded-full blur-2xl pointer-events-none">
-          </div>
-          <div class="flex items-start gap-3">
-            <div
-              class="w-10 h-10 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/20">
-              <span class="material-symbols-outlined text-white text-[22px]">format_quote</span>
-            </div>
-            <div class="flex flex-col gap-1">
-              <span
-                class="font-mono text-[11px] uppercase tracking-wider text-primary-fixed-dim font-bold">鴻運算核心信仰</span>
-              <p class="font-sans text-[17px] font-black leading-snug tracking-tight text-white">
-                「好的創業想法，<br />不該被開發速度與昂貴成本限制。」
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 02: 行動版核心優勢 -->
-      <section class="px-4 py-11 flex flex-col gap-6 bg-background scroll-mt-24" id="advantages-m">
-        <div class="flex flex-col gap-1.5 text-center items-center">
-          <div
-            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-[11px] font-bold tracking-wider uppercase shadow-sm">
-            <span class="material-symbols-outlined text-[14px]">bolt</span>解決方案
-          </div>
-          <h2 class="font-sans text-[26px] sm:text-[28px] text-on-surface font-extrabold tracking-tight">
-            極速開發、半價實現</h2>
+            <span class="material-symbols-outlined text-[14px]">bolt</span>雙引擎 ‧ 雙 7 OFF
+          </div> -->
+          <h2 class="font-sans text-[26px] sm:text-[28px] text-on-surface font-extrabold tracking-tight leading-snug">
+            獨創<span class="text-primary font-black">「雙引擎」</span><br />
+            <span
+              class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">實現真正「雙
+              7 OFF」</span>
+          </h2>
           <p class="font-sans text-[13px] text-on-surface-variant max-w-xs leading-relaxed">
-            20年架構經驗 + AI 智能體，打破傳統開發限制。
+            20年頂級架構師 + AI 智能體，打破傳統外包限制
           </p>
         </div>
         <!-- 2-Column Advantage Image Grid with '+' Badge -->
@@ -488,7 +599,7 @@
                 <h3
                   class="font-sans text-[22px] sm:text-[26px] font-black text-purple-600 tracking-tight leading-tight mb-0.5">
                   獨創 AI 智能體</h3>
-                <p class="font-sans text-[11px] font-bold text-purple-950 leading-snug">秒級程式碼生成，14天敏捷交付。</p>
+                <p class="font-sans text-[11px] font-bold text-purple-950 leading-snug">秒級程式碼生成，最快 14 天交付。</p>
               </div>
             </div>
             <!-- Mobile '+' Badge -->
@@ -515,9 +626,9 @@
               </div>
             </div>
             <div>
-              <h3 class="font-sans text-[17px] text-on-surface font-extrabold mb-1">縮短 70% 開發時程</h3>
+              <h3 class="font-sans text-[17px] text-on-surface font-extrabold mb-1">節省 70% 時間</h3>
               <p class="font-sans text-[13px] text-on-surface-variant leading-relaxed">
-                AI 自動產出程式碼，避開手工撰寫，迅速搶佔市場先機。
+                AI 自動產出程式碼，避開手工撰寫，最快 14 天閃電交付。
               </p>
             </div>
             <div
@@ -525,7 +636,7 @@
               <div class="flex flex-col gap-1">
                 <div class="flex justify-between font-mono text-[11px]">
                   <span class="text-outline">傳統外包交付</span>
-                  <span class="font-semibold text-outline">60~90 天</span>
+                  <span class="font-semibold text-outline">60~90 天以上</span>
                 </div>
                 <div class="w-full h-2 rounded-full bg-surface-variant/60 overflow-hidden">
                   <div class="h-full rounded-full bg-outline/40 w-full"></div>
@@ -551,190 +662,195 @@
             class="p-5 rounded-3xl bg-surface-container-lowest border border-surface-variant shadow-sm flex flex-col gap-3.5">
             <div class="flex items-center justify-between">
               <div class="flex items-baseline gap-2">
-                <span class="font-sans text-[40px] text-secondary font-black tracking-tighter leading-none">50%↓</span>
                 <span
-                  class="font-mono text-[11px] font-bold text-secondary uppercase px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 border border-secondary-fixed-dim">成本砍半</span>
+                  class="font-sans text-[40px] text-emerald-700 font-black tracking-tighter leading-none">70%↓</span>
+                <span
+                  class="font-mono text-[11px] font-bold text-emerald-700 uppercase px-2.5 py-0.5 rounded-full bg-emerald-100 border border-emerald-200">節省資金</span>
               </div>
               <div
-                class="w-11 h-11 rounded-2xl bg-secondary-fixed/50 text-secondary flex items-center justify-center border border-secondary/20">
+                class="w-11 h-11 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center border border-emerald-300/40">
                 <span class="material-symbols-outlined text-[24px]">savings</span>
               </div>
             </div>
             <div>
-              <h3 class="font-sans text-[17px] text-on-surface font-extrabold mb-1">省下 15-30 萬預算</h3>
+              <h3 class="font-sans text-[17px] text-on-surface font-extrabold mb-1">節省 70% 資金 ‧ 省 15-30 萬</h3>
               <p class="font-sans text-[13px] text-on-surface-variant leading-relaxed">
-                人機協同大幅減少工時與團隊建置費，讓預算節省 50%。
+                人機協同大幅減少工時與團隊建置費，把預算真正花在刀口上。
               </p>
             </div>
             <div
               class="flex items-center justify-between p-3 rounded-2xl bg-surface-container border border-surface-variant font-mono text-[11px]">
               <span class="text-outline">自動排障與驗證</span>
-              <span class="text-secondary font-bold flex items-center gap-1">
+              <span class="text-emerald-800 font-bold flex items-center gap-1">
                 <span class="material-symbols-outlined text-[14px]">monetization_on</span>
-                現省 50% 預算
+                現省 15-30 萬預算
               </span>
             </div>
           </div>
         </div>
         <!-- Mobile Shortcut CTA Button for Advantages -->
-        <a class="w-full min-h-[48px] mt-2 py-3.5 px-6 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-[15px] font-bold flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
+        <a class="w-full min-h-[48px] mt-2 py-3.5 px-4 sm:px-6 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-[14px] sm:text-[15px] font-bold flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
           href="#cta">
-          <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-          <span>立即免費取得規格書與原型 →</span>
+          <span class="w-2 h-2 rounded-full bg-white animate-ping shrink-0"></span>
+          <span>免費取得規格與原型，讓您盡情<span
+              class="text-amber-300 font-black text-[15px] sm:text-[16px] px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+            →</span>
         </a>
       </section>
 
-      <!-- SECTION 03: 行動版免費交付成果 -->
+      <!-- SECTION 03: 新創做系統 ‧ 避開 AI 陷阱 ‧ 雙引擎實現雙 7 OFF -->
       <section
-        class="px-4 py-11 flex flex-col gap-6 bg-surface-container-low/70 border-y border-surface-variant/70 scroll-mt-24"
-        id="deliverables-m">
+        class="px-4 py-11 flex flex-col gap-6 bg-surface-container-low/60 border-t border-surface-variant/70 scroll-mt-24"
+        id="pain-points-m">
+        <!-- Section Header (與 Section 01, 02 結構風格完全一致) -->
         <div class="flex flex-col gap-1.5 text-center items-center">
-          <div
-            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-[11px] font-bold tracking-wider uppercase shadow-sm">
-            <span class="material-symbols-outlined text-[14px]">verified</span>免費體驗
-          </div>
+          <!-- <div
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest border border-surface-variant text-amber-600 font-mono text-[11px] font-bold tracking-wider uppercase shadow-sm">
+            <span class="material-symbols-outlined text-[14px] text-amber-500">lightbulb</span>好點子
+          </div> -->
           <h2 class="font-sans text-[26px] sm:text-[28px] text-on-surface font-extrabold leading-snug">
-            只要給我們一段話<br />
-            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">100% 免費交付兩大成果</span>
+            新創做系統<br />
+            <span class="bg-gradient-to-r from-rose-600 via-primary to-secondary bg-clip-text text-transparent">避開 AI
+              陷阱</span>
           </h2>
           <p class="font-sans text-[13px] text-on-surface-variant max-w-xs leading-relaxed">
-            零費用 ‧ 零綁定 ‧ 不開發也免費贈送
+            單靠 AI 盲目生成只會做出無法上線的玩具，要穩健落地需要雙引擎
           </p>
         </div>
-        <!-- 實景圖片展示區 -->
+
+        <!-- 鴻運算核心信仰 Card (優雅白底 + 品牌漸層點綴，視覺輕盈和諧) -->
         <div
-          class="w-full relative rounded-3xl overflow-hidden shadow-[0_10px_32px_rgba(20,27,60,0.1)] border border-surface-variant/90 bg-surface-container-lowest group">
-          <div class="w-full aspect-[16/11] overflow-hidden relative">
-            <img alt="創業者白話對話與 AI 智能解析藍圖情境圖"
-              class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
-              src="images/img_006_db5d93ffbd.jpg" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/15 to-transparent"></div>
-            <div
-              class="absolute top-3.5 left-3.5 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-full border border-surface-variant/80 shadow-sm flex items-center gap-1.5 text-primary font-mono text-[10px] font-bold">
-              <span class="material-symbols-outlined text-[14px] text-primary">chat_bubble</span>一句話 ➜ 轉化系統架構
-            </div>
-            <div class="absolute bottom-3 left-3.5 right-3.5 text-white flex items-center justify-between">
-              <div>
-                <div class="font-sans text-[13px] font-extrabold drop-shadow">白話需求即規格</div>
-                <div class="font-mono text-[10px] text-primary-fixed drop-shadow">AI 智能體解構產品邏輯</div>
-              </div>
-              <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
-                <span class="material-symbols-outlined text-white text-[18px]">auto_awesome</span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <!-- 1-2-3 步驟指示 -->
-        <div
-          class="grid grid-cols-3 gap-2 text-center p-3.5 rounded-2xl bg-surface-container-lowest border border-surface-variant shadow-sm">
-          <div class="flex flex-col items-center gap-1">
-            <div
-              class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs font-mono">
-              1</div>
-            <span class="font-sans text-[11px] font-bold text-on-surface">說出想法</span>
-            <span class="font-mono text-[9px] text-outline">一句白話需求</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 relative">
-            <div
-              class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-xs font-mono">
-              2</div>
-            <span class="font-sans text-[11px] font-bold text-on-surface">AI 智能解析</span>
-            <span class="font-mono text-[9px] text-outline">自動解構架構</span>
-          </div>
-          <div class="flex flex-col items-center gap-1">
-            <div
-              class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs font-mono">
-              3</div>
-            <span class="font-sans text-[11px] font-bold text-on-surface">2 份成果</span>
-            <span class="font-mono text-[9px] text-emerald-700 font-bold">100% 免費交付</span>
-          </div>
-        </div>
-        <!-- 兩大成果卡 (雙欄) -->
-        <div class="grid grid-cols-2 gap-3">
-          <!-- Left: 01 專屬系統規格書 -->
+          class="w-full p-4 sm:p-5 rounded-3xl bg-surface-container-lowest border border-primary/20 shadow-[0_6px_24px_rgba(53,37,205,0.06)] relative overflow-hidden text-left">
+          <!-- 柔和環境漸層光暈與浮水印 -->
           <div
-            class="p-3.5 rounded-2xl bg-gradient-to-b from-blue-50/80 to-surface-container-lowest border-2 border-blue-600/30 shadow-[0_4px_16px_rgba(37,99,235,0.08)] flex flex-col justify-between relative overflow-hidden group">
-            <div class="flex flex-col gap-2.5 relative z-10">
-              <div class="flex items-center justify-between gap-1">
+            class="absolute -right-8 -bottom-8 w-36 h-36 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-2xl pointer-events-none">
+          </div>
+          <span
+            class="material-symbols-outlined absolute right-3 -bottom-3 text-[76px] text-primary/5 select-none pointer-events-none font-black">format_quote</span>
+
+          <div class="flex items-start gap-3 relative z-10">
+            <div
+              class="w-10 h-10 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0 border border-primary/20 shadow-sm">
+              <span class="material-symbols-outlined text-[22px]">format_quote</span>
+            </div>
+            <div class="flex flex-col gap-1 text-left">
+              <span
+                class="font-mono text-[11px] uppercase tracking-wider text-primary font-bold flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>鴻運算核心信仰
+              </span>
+              <p class="font-sans text-[17px] font-black leading-snug tracking-tight text-on-surface">
+                「好的創業想法，<br />
                 <span
-                  class="w-7 h-7 rounded-xl bg-blue-600 text-white font-mono text-[11px] font-black flex items-center justify-center shadow-md shadow-blue-600/30">01</span>
-                <span
-                  class="px-2 py-0.5 rounded-full bg-blue-600 text-white font-mono text-[9px] font-bold tracking-tight shadow-sm">核心重點</span>
-              </div>
-              <div class="flex flex-col gap-1">
-                <div class="flex items-center gap-1.5 text-blue-600">
-                  <span class="material-symbols-outlined text-[22px]">description</span>
-                  <h3 class="font-sans text-[18px] sm:text-[22px] font-black text-blue-600 leading-tight">專屬系統規格書</h3>
-                </div>
-                <div class="inline-flex flex-col bg-blue-100/70 border border-blue-200 rounded-xl px-2 py-1.5 mt-0.5">
-                  <span class="font-mono text-[9px] text-blue-700 font-bold uppercase tracking-wider">市場合約價值</span>
-                  <span class="font-mono text-[14px] font-black text-blue-950 leading-none mt-0.5">NT$ 30,000+</span>
-                </div>
-              </div>
-              <p class="font-sans text-[11px] text-on-surface-variant leading-relaxed">
-                白話轉為標準架構與資料表設計，可直接發包。
+                  class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">不該被開發速度與昂貴成本限制。</span>」
               </p>
             </div>
-            <div
-              class="mt-2 pt-2 border-t border-blue-200/60 flex items-center gap-1 text-blue-700 font-mono text-[10px] font-bold">
-              <span class="material-symbols-outlined text-[13px] text-blue-600 shrink-0">check_circle</span>
-              <span class="truncate">完整交付 ‧ 0元收費</span>
+          </div>
+        </div>
+
+        <!-- AI 陷阱 引導標題 -->
+        <div class="flex flex-col gap-1.5 pt-1 text-left">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-4 rounded-full bg-rose-500"></span>
+              <h3 class="font-sans text-[20px] sm:text-[22px] font-black text-on-surface tracking-tight">
+                小心 <span class="text-rose-600">AI 陷阱</span>
+              </h3>
             </div>
+            <span
+              class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 border border-rose-200/80 text-rose-600 font-mono text-[10px] font-bold">
+              <span class="material-symbols-outlined text-[13px]">warning</span>避坑提醒
+            </span>
+          </div>
+          <p class="font-sans text-[12px] text-on-surface-variant leading-relaxed">
+            即便是工程師用 AI 寫程式，最常踩進這道看似省錢實是坑：
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <!-- AI TRAP CARD: 不懂技術，AI亂生成 -->
+          <div
+            class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-sm p-4 flex flex-col gap-3 group overflow-hidden transition-all text-left">
+            <div
+              class="w-full aspect-[16/9] rounded-2xl overflow-hidden relative bg-surface-container border border-surface-variant/60 shadow-inner">
+              <img alt="不懂技術，AI亂生成"
+                class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
+                src="images/img_082_a239577df1.jpg" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                <span
+                  class="w-6 h-6 rounded-lg bg-rose-600/90 backdrop-blur-md text-white font-mono text-[10px] font-black flex items-center justify-center shadow-sm">!</span>
+                <span
+                  class="px-2 py-0.5 rounded-full bg-slate-900/80 backdrop-blur-md text-white font-mono text-[9px] font-bold border border-white/20">AI
+                  陷阱</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <div class="flex items-center gap-1.5 text-rose-600">
+                <span class="material-symbols-outlined text-[18px]">error</span>
+                <h3 class="font-sans text-[17px] sm:text-[18px] text-on-surface font-extrabold tracking-tight">
+                  不懂技術，AI亂生成</h3>
+              </div>
+
+            </div>
+            <div class="p-3 rounded-2xl bg-surface-container-low border border-primary/20 flex items-start gap-2.5">
+              <div
+                class="w-7 h-7 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 border border-primary/20 mt-0.5">
+                <span class="material-symbols-outlined text-[16px]">verified</span>
+              </div>
+              <div class="flex flex-col gap-0.5 text-[12px] font-sans leading-relaxed text-on-surface">
+                <div class="flex items-center gap-1.5">
+                  <span class="font-bold text-primary">鴻運算解法</span>
+                  <span
+                    class="font-mono text-[10px] font-semibold text-primary bg-primary-fixed/60 px-1.5 py-0.2 rounded-md border border-primary-fixed-dim">雙引擎把關</span>
+                </div>
+                <span class="text-on-surface-variant text-[11px] leading-relaxed">沒有雙引擎（頂級架構師 + AI 智能體），單靠 AI 只會亂生成！我們由
+                  20 年架構師親自驗證底層邏輯，才能穩健實現「雙 7 OFF」極速試錯。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 想要雙 7 OFF 核心強調 (左右雙倍 Padding 內縮集中，視覺焦點更醒目) -->
+        <div class="w-full pt-2 pb-1 px-6 sm:px-10 flex flex-col items-center text-center gap-2.5">
+          <!-- 頂部標籤 -->
+          <div class="flex items-center justify-center gap-2">
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-primary/10 border border-primary/25 text-primary font-mono text-[11px] font-bold uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>破局關鍵公式
+            </span>
           </div>
 
-          <!-- Right: 02 UI/UX 原型設計 -->
-          <div
-            class="p-3.5 rounded-2xl bg-surface-container-lowest border border-purple-200/80 shadow-sm flex flex-col justify-between relative overflow-hidden group">
-            <div class="flex flex-col gap-2.5 relative z-10">
-              <div class="flex items-center justify-between gap-1">
-                <span
-                  class="w-7 h-7 rounded-xl bg-purple-600 text-white font-mono text-[11px] font-black flex items-center justify-center shadow-md shadow-purple-600/30">02</span>
-                <span
-                  class="px-2 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-mono text-[9px] font-bold">互動展示</span>
-              </div>
-              <div class="flex flex-col gap-1">
-                <div class="flex items-center gap-1.5 text-purple-600">
-                  <span class="material-symbols-outlined text-[22px]">devices</span>
-                  <h3 class="font-sans text-[18px] sm:text-[22px] font-black text-purple-600 leading-tight">UI/UX 原型設計
-                  </h3>
-                </div>
-                <div
-                  class="inline-flex flex-col bg-purple-50 border border-purple-200/80 rounded-xl px-2 py-1.5 mt-0.5">
-                  <span class="font-mono text-[9px] text-purple-700 font-bold uppercase tracking-wider">市場合約價值</span>
-                  <span class="font-mono text-[14px] font-black text-purple-950 leading-none mt-0.5">NT$ 50,000</span>
-                </div>
-              </div>
-              <p class="font-sans text-[11px] text-on-surface-variant leading-relaxed">
-                高擬真可點擊介面，方便團隊簡報與展示。
-              </p>
-            </div>
-            <div
-              class="mt-2 pt-2 border-t border-purple-200/60 flex items-center gap-1 text-purple-700 font-mono text-[10px] font-bold">
-              <span class="material-symbols-outlined text-[13px] text-purple-600 shrink-0">check_circle</span>
-              <span class="truncate">可點擊原型 ‧ 支援演示</span>
-            </div>
+          <!-- 主標語：想要雙 7 OFF，時間70% OFF，成本70% OFF，就要雙引擎 -->
+          <div class="flex flex-col gap-1.5 items-center text-center">
+            <span class="font-mono text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">
+              想要新創做系統真正極速試錯？
+            </span>
+            <h3 class="font-sans text-[22px] sm:text-[24px] font-black text-on-surface tracking-tight leading-snug">
+              想要「雙 7 OFF」？<br />
+              <span class="text-primary font-black">時間 70% OFF</span>，<br />
+              <span class="text-emerald-700 font-black">成本 70%
+                OFF</span>，<br />
+              <span
+                class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">就要「雙引擎」！</span>
+            </h3>
           </div>
         </div>
-        <!-- Mobile Shortcut CTA Button -->
-        <a class="w-full min-h-[48px] mt-2 py-3.5 px-6 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-[15px] font-bold flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
+
+        <!-- Mobile Shortcut CTA Button for Pain Points -->
+        <a class="w-full min-h-[48px] mt-2 py-3.5 px-4 sm:px-6 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-[14px] sm:text-[15px] font-bold flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
           href="#cta">
-          <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-          <span>立即免費取得規格書與原型 →</span>
+          <span class="w-2 h-2 rounded-full bg-white animate-ping shrink-0"></span>
+          <span>免費取得規格與原型，讓您盡情<span
+              class="text-amber-300 font-black text-[15px] sm:text-[16px] px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+            →</span>
         </a>
       </section>
 
       <!-- SECTION 04: 行動版 Demo Showcase (6大卡片) -->
       <section class="px-4 py-11 flex flex-col gap-4 bg-background scroll-mt-24" id="demo-m">
-        <div class="flex items-center justify-between">
-          <div class="flex flex-col gap-1">
-            <div
-              class="inline-flex items-center gap-1 text-primary font-mono text-[10px] font-bold uppercase tracking-wider">
-              <span class="material-symbols-outlined text-[14px]">grid_view</span>實體展示
-            </div>
-            <h2 class="font-sans text-[22px] text-on-surface font-extrabold tracking-tight">系統展示 Demo</h2>
-          </div>
-          <span class="font-mono text-[10px] text-primary bg-primary-fixed/60 px-2.5 py-1 rounded-full font-bold">6 大系統
-            Demo</span>
+        <div class="flex flex-col items-center text-center w-full">
+          <h2 class="font-sans text-[22px] sm:text-[24px] text-on-surface font-extrabold tracking-tight">系統展示
+            Demo<br><span class="text-primary">體驗預期成果</span></h2>
         </div>
         <!-- 6 大系統卡片 (單欄堆疊) -->
         <div class="flex flex-col gap-4">
@@ -956,8 +1072,8 @@
       </section>
     </div>
 
-    <!-- ================= DESKTOP VIEW CONTENT (hidden md:block) ================= -->
-    <div class="hidden md:block w-full">
+    <!-- ================= DESKTOP VIEW CONTENT (hidden lg:block) ================= -->
+    <div class="hidden lg:block w-full">
       <!-- ================= HERO 首屏區塊 ================= -->
       <section class="relative px-4 sm:px-6 lg:px-8 py-10 lg:py-20 overflow-hidden">
         <div
@@ -969,7 +1085,7 @@
         <div class="max-w-7xl mx-auto">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <!-- Left Hero Content Column -->
-            <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <div class="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left">
               <div
                 class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-xs font-bold mb-6 shadow-sm">
                 <span class="flex h-2 w-2 relative">
@@ -980,25 +1096,56 @@
                 鴻運算 ‧ AI 智能體驅動架構
               </div>
               <h1
-                class="font-sans text-3xl sm:text-4xl lg:text-6xl font-black tracking-tight text-on-surface leading-[1.2] lg:leading-[1.15] mb-6">
-                想創業，<br class="hidden sm:inline" />
+                class="font-sans text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-black tracking-tight text-on-surface leading-[1.25] lg:leading-[1.2] mb-4">
+                <span class="inline-flex items-center gap-2.5 align-middle">
+                  <span
+                    class="inline-flex items-center justify-center bg-gradient-to-r from-primary via-primary-container to-secondary text-white px-3.5 py-1.5 rounded-2xl shadow-md shadow-primary/25 text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-black leading-none whitespace-nowrap">雙
+                    7 OFF</span>
+                  <span>極速啟動</span>
+                </span><br class="hidden sm:inline" />
                 <span
-                  class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">卻被開發卡住？</span>
+                  class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">打造網站App</span>
               </h1>
-              <p
-                class="font-sans text-base sm:text-lg lg:text-xl text-on-surface-variant font-medium mb-8 leading-relaxed max-w-2xl">
-                白話需求 ➜ 鴻運算 AI 智能體最快 14 天極速交付，省下 50% 開發成本。
-              </p>
-              <div class="w-full sm:w-auto flex flex-col sm:flex-row items-center gap-3.5 mb-8">
-                <a class="w-full sm:w-auto min-h-[52px] py-3.5 px-8 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-base font-bold flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-3.5 w-full max-w-xl mb-8">
+                <div
+                  class="p-3.5 sm:p-4 rounded-2xl bg-surface-container-lowest border-2 border-primary/30 shadow-[0_4px_16px_rgba(53,37,205,0.06)] flex items-center gap-3 transition-all hover:border-primary">
+                  <div
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shrink-0 shadow-xs">
+                    <span class="material-symbols-outlined text-2xl font-bold">bolt</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span
+                      class="font-sans text-lg sm:text-xl lg:text-lg xl:text-xl 2xl:text-2xl font-black text-primary tracking-tight leading-tight whitespace-nowrap">節省
+                      70% 時間</span>
+                    <span
+                      class="font-sans text-xs sm:text-sm font-bold text-on-surface-variant mt-0.5 whitespace-nowrap">最快
+                      <span class="text-on-surface font-extrabold text-xs sm:text-sm xl:text-base">14 天</span>交付</span>
+                  </div>
+                </div>
+                <div
+                  class="p-3.5 sm:p-4 rounded-2xl bg-surface-container-lowest border-2 border-emerald-500/30 shadow-[0_4px_16px_rgba(16,185,129,0.06)] flex items-center gap-3 transition-all hover:border-emerald-600">
+                  <div
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 shadow-xs">
+                    <span class="material-symbols-outlined text-2xl font-bold">savings</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span
+                      class="font-sans text-lg sm:text-xl lg:text-lg xl:text-xl 2xl:text-2xl font-black text-emerald-700 tracking-tight leading-tight whitespace-nowrap">節省
+                      70% 資金</span>
+                    <span
+                      class="font-sans text-xs sm:text-sm font-bold text-on-surface-variant mt-0.5 whitespace-nowrap">現省
+                      <span class="text-emerald-950 font-extrabold text-xs sm:text-sm xl:text-base">15-30
+                        萬</span>預算</span>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full sm:w-auto flex flex-col xl:flex-row items-center gap-3.5 mb-8">
+                <a class="w-full sm:w-auto min-h-[52px] py-3.5 px-7 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-base font-bold flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
                   href="#cta">
-                  <span>立即免費開始你的創業想法</span>
-                  <span class="material-symbols-outlined text-xl">arrow_forward</span>
-                </a>
-                <a class="w-full sm:w-auto min-h-[52px] py-3.5 px-7 rounded-full bg-surface-container-lowest border border-surface-variant text-on-surface font-sans text-sm font-bold flex items-center justify-center gap-2 hover:bg-surface-container active:scale-[0.98] transition-all shadow-sm"
-                  href="#demo">
-                  <span class="material-symbols-outlined text-primary text-xl">grid_view</span>
-                  <span>查看系統 Demo</span>
+                  <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                  <span>免費取得規格與原型，讓您盡情<span
+                      class="text-amber-300 font-black px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+                    →</span>
                 </a>
               </div>
               <div
@@ -1013,48 +1160,34 @@
                 </div>
                 <div class="flex items-center gap-1.5">
                   <span class="material-symbols-outlined text-secondary text-lg">savings</span>
-                  <span>節省 50% 成本開銷</span>
+                  <span>省下 15-30 萬預算</span>
                 </div>
               </div>
             </div>
-            <!-- Right Hero Visual Column -->
-            <div class="lg:col-span-5 w-full">
+            <!-- Right Hero Visual Column (放大寬度至 7 欄寬廣全景展示) -->
+            <div class="lg:col-span-7 w-full">
               <div
                 class="relative rounded-3xl overflow-hidden shadow-[0_16px_48px_rgba(20,27,60,0.12)] border border-surface-variant/90 bg-surface-container-lowest group">
-                <div class="aspect-[4/4.6] w-full overflow-hidden relative">
-                  <img alt="創業者手持成功產品於現代科技辦公室"
-                    class="w-full h-full object-cover object-top group-hover:scale-102 transition-transform duration-700"
-                    src="images/img_081_247b05c392.jpg" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent">
+                <div class="aspect-[16/10] w-full overflow-hidden relative">
+                  <img alt="新創創業者於現代科技辦公室展示網站與App成果"
+                    class="w-full h-full object-cover object-[center_15%] group-hover:scale-102 transition-transform duration-700"
+                    src="images/hero_male_founder.jpg" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent">
+                  </div>
+                  <!-- 浮在圖的上方的品牌 Slogan 膠囊 (左上方) -->
+                  <div
+                    class="absolute top-4 left-4 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/90 shadow-xl flex items-center gap-2.5 z-10 transition-all hover:scale-102">
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-xs font-black shadow-xs shrink-0">雙 7 OFF</span>
+                    <span class="font-sans text-xs sm:text-sm lg:text-[14px] xl:text-base font-black text-on-surface tracking-tight whitespace-nowrap">
+                      讓您時間、成本 <span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent font-black">70% OFF</span>
+                    </span>
                   </div>
                   <div
                     class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-surface-variant/80 shadow-md flex items-center gap-1.5 text-primary font-mono text-xs font-bold">
                     <span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
                     最快 14 天交付
                   </div>
-                  <div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2.5 text-left">
-                    <div class="flex items-center gap-2">
-                      <span
-                        class="px-3 py-1 rounded-full bg-emerald-500 text-white font-mono text-[11px] font-extrabold tracking-wider shadow-sm">AI
-                        極速落地</span>
-                      <span
-                        class="px-3 py-1 rounded-full bg-white/25 text-white font-mono text-[11px] font-medium backdrop-blur-sm">零技術門檻</span>
-                    </div>
-                    <div
-                      class="bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-3.5 sm:p-4 border border-white/80 shadow-xl flex items-center justify-between">
-                      <div class="flex items-center gap-3">
-                        <div
-                          class="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-primary-container text-white flex items-center justify-center shadow-md">
-                          <span class="material-symbols-outlined text-2xl">rocket_launch</span>
-                        </div>
-                        <div>
-                          <div class="font-sans text-sm sm:text-base font-black text-on-surface">14 天閃電交付 ‧ 成果全歸您</div>
-                          <div class="font-mono text-xs text-primary font-bold">省 50% 開發成本 ‧ 規格完全透明</div>
-                        </div>
-                      </div>
-                      <span class="material-symbols-outlined text-primary text-2xl shrink-0">check_circle</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -1062,350 +1195,84 @@
         </div>
       </section>
 
-      <!-- ================= SECTION 01: 創業痛點？ (桌機) ================= -->
+      <!-- ================= SECTION 01: 100% 全額免費交付兩大成果 ‧ 盡情比價 (桌機) ================= -->
       <section
-        class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-surface-container-low/60 border-t border-surface-variant/70 scroll-mt-20"
-        id="pain-points">
-        <div class="max-w-7xl mx-auto flex flex-col gap-10 lg:gap-14">
-          <div class="flex flex-col gap-3 text-center items-center">
-            <div
-              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-xs font-bold tracking-wider uppercase shadow-sm">
-              <span class="material-symbols-outlined text-[15px]">help_outline</span>3 個核心痛點
-            </div>
-            <h2 class="font-sans text-2xl sm:text-3xl lg:text-4xl text-on-surface font-black tracking-tight">創業痛點？</h2>
-            <p class="font-sans text-sm sm:text-base text-on-surface-variant max-w-xl">
-              多數優秀創業想法，常卡在這三道關卡前。
-            </p>
-          </div>
-          <!-- 3 欄等高並排卡片 -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <!-- PAIN CARD 01 -->
-            <div
-              class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-[0_8px_24px_rgba(20,27,60,0.06)] overflow-hidden flex flex-col group transition-all hover:shadow-xl hover:-translate-y-1">
-              <div class="relative w-full aspect-[16/10]">
-                <div class="absolute inset-0 bg-surface-container overflow-hidden">
-                  <img alt="不懂技術，規格說不清"
-                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    src="images/img_082_a239577df1.jpg" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
-                </div>
-                <div
-                  class="absolute top-3.5 left-3.5 z-10 w-10 h-10 rounded-2xl bg-blue-600 text-white font-mono text-base font-black flex items-center justify-center shadow-lg shadow-blue-600/30">
-                  01</div>
-                <div
-                  class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-[0_4px_16px_rgba(37,99,235,0.4)] ring-4 ring-white">
-                  <span class="material-symbols-outlined text-2xl">code</span>
-                </div>
-              </div>
-              <div class="pt-9 px-6 pb-6 flex flex-col flex-1 gap-3 text-center items-center justify-between">
-                <div class="flex flex-col items-center gap-2">
-                  <h3 class="font-sans text-lg lg:text-xl text-on-surface font-extrabold tracking-tight">不懂技術，規格說不清</h3>
-                  <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed text-center">
-                    非工程背景難跟工程師溝通，外包溝通處處踩雷，做出來跟想的不一樣。
-                  </p>
-                </div>
-                <div
-                  class="w-full mt-3 p-3.5 rounded-2xl bg-blue-50 border border-blue-200/80 flex items-start gap-2.5 text-left">
-                  <span class="text-blue-600 font-bold text-sm shrink-0 mt-0.5">✨</span>
-                  <div class="text-xs font-sans leading-relaxed text-blue-950">
-                    <span class="font-bold text-blue-700">鴻運算解法：</span>白話描述即可，AI 自動轉成標準規格書。
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- PAIN CARD 02 -->
-            <div
-              class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-[0_8px_24px_rgba(20,27,60,0.06)] overflow-hidden flex flex-col group transition-all hover:shadow-xl hover:-translate-y-1">
-              <div class="relative w-full aspect-[16/10]">
-                <div class="absolute inset-0 bg-surface-container overflow-hidden">
-                  <img alt="開發太慢，錯過黃金期"
-                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    src="images/img_083_5a6c8c4b47.jpg" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
-                </div>
-                <div
-                  class="absolute top-3.5 left-3.5 z-10 w-10 h-10 rounded-2xl bg-purple-600 text-white font-mono text-base font-black flex items-center justify-center shadow-lg shadow-purple-600/30">
-                  02</div>
-                <div
-                  class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30 w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center shadow-[0_4px_16px_rgba(147,51,234,0.4)] ring-4 ring-white">
-                  <span class="material-symbols-outlined text-2xl">hourglass_empty</span>
-                </div>
-              </div>
-              <div class="pt-9 px-6 pb-6 flex flex-col flex-1 gap-3 text-center items-center justify-between">
-                <div class="flex flex-col items-center gap-2">
-                  <h3 class="font-sans text-lg lg:text-xl text-on-surface font-extrabold tracking-tight">開發太慢，錯過黃金期</h3>
-                  <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed text-center">
-                    傳統外包動輒 3~6 個月，等系統做出來，競品早已搶占先機。
-                  </p>
-                </div>
-                <div
-                  class="w-full mt-3 p-3.5 rounded-2xl bg-purple-50 border border-purple-200/80 flex items-start gap-2.5 text-left">
-                  <span class="text-purple-600 font-bold text-sm shrink-0 mt-0.5">⚡</span>
-                  <div class="text-xs font-sans leading-relaxed text-purple-950">
-                    <span class="font-bold text-purple-700">鴻運算解法：</span>AI 流水線開發，最快 14 天交付上線。
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- PAIN CARD 03 -->
-            <div
-              class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-[0_8px_24px_rgba(20,27,60,0.06)] overflow-hidden flex flex-col group transition-all hover:shadow-xl hover:-translate-y-1 md:col-span-2 lg:col-span-1">
-              <div class="relative w-full aspect-[16/10]">
-                <div class="absolute inset-0 bg-surface-container overflow-hidden">
-                  <img alt="成本太高，動輒幾十萬起跳"
-                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    src="images/img_084_9c5346e0e7.jpg" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
-                </div>
-                <div
-                  class="absolute top-3.5 left-3.5 z-10 w-10 h-10 rounded-2xl bg-amber-600 text-white font-mono text-base font-black flex items-center justify-center shadow-lg shadow-amber-600/30">
-                  03</div>
-                <div
-                  class="absolute -bottom-6 left-1/2 -translate-x-1/2 z-30 w-12 h-12 rounded-full bg-amber-600 text-white flex items-center justify-center shadow-[0_4px_16px_rgba(217,119,6,0.4)] ring-4 ring-white">
-                  <span class="material-symbols-outlined text-2xl">payments</span>
-                </div>
-              </div>
-              <div class="pt-9 px-6 pb-6 flex flex-col flex-1 gap-3 text-center items-center justify-between">
-                <div class="flex flex-col items-center gap-2">
-                  <h3 class="font-sans text-lg lg:text-xl text-on-surface font-extrabold tracking-tight">成本太高，動輒幾十萬起跳
-                  </h3>
-                  <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed text-center">
-                    傳統外包與組團隊動輒數十萬起跳，預算燒光產品還沒上線。
-                  </p>
-                </div>
-                <div
-                  class="w-full mt-3 p-3.5 rounded-2xl bg-amber-50 border border-amber-200/80 flex items-start gap-2.5 text-left">
-                  <span class="text-amber-600 font-bold text-sm shrink-0 mt-0.5">💰</span>
-                  <div class="text-xs font-sans leading-relaxed text-amber-950">
-                    <span class="font-bold text-amber-700">鴻運算解法：</span>人機協同省人力，首期現省 15-30 萬。
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Quote Box: 核心信仰 -->
-          <div
-            class="w-full p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-primary via-primary-container to-secondary text-white relative overflow-hidden shadow-xl shadow-primary/20">
-            <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none">
-            </div>
-            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5">
-              <div
-                class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center shrink-0 border border-white/25">
-                <span class="material-symbols-outlined text-white text-3xl">format_quote</span>
-              </div>
-              <div class="flex flex-col gap-1.5 text-center sm:text-left">
-                <span class="font-mono text-xs uppercase tracking-wider text-primary-fixed-dim font-bold">鴻運算核心信仰</span>
-                <p class="font-sans text-xl sm:text-2xl lg:text-3xl font-black leading-snug tracking-tight text-white">
-                  「好的創業想法，不該被開發速度與昂貴成本限制。」
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= SECTION 02: 核心優勢 (桌機) ================= -->
-      <section class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-background scroll-mt-20" id="advantages">
-        <div class="max-w-7xl mx-auto flex flex-col gap-10 lg:gap-14">
-          <div class="flex flex-col gap-3 text-center items-center">
-            <div
-              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-xs font-bold tracking-wider uppercase shadow-sm">
-              <span class="material-symbols-outlined text-[15px]">bolt</span>解決方案
-            </div>
-            <h2 class="font-sans text-2xl sm:text-3xl lg:text-4xl text-on-surface font-black tracking-tight">
-              極速開發、半價實現
-            </h2>
-            <p class="font-sans text-sm sm:text-base text-on-surface-variant max-w-xl leading-relaxed">
-              20年架構經驗 + AI 智能體協同流水線，打破傳統開發天花板。
-            </p>
-          </div>
-          <!-- 架構雙卡 (人類工程師 + AI 智能體) -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 relative">
-            <!-- Card 01 -->
-            <div
-              class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row gap-5 overflow-hidden transition-all hover:border-blue-300 hover:shadow-lg">
-              <div
-                class="w-full sm:w-48 aspect-[16/10] sm:aspect-square rounded-2xl overflow-hidden bg-surface-container relative shrink-0 border border-surface-variant/60">
-                <img alt="20年資深頂級工程師" class="w-full h-full object-cover object-top"
-                  src="images/architect_portrait.jpg" />
-                <div
-                  class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-blue-600 text-white font-mono text-xs font-bold">
-                  01</div>
-              </div>
-              <div class="flex flex-col justify-center gap-2">
-                <div
-                  class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-blue-600 uppercase tracking-tight">
-                  <span class="w-2 h-2 rounded-full bg-blue-600"></span>人類經驗 ‧ 20 年資深
-                </div>
-                <h3
-                  class="font-sans text-2xl sm:text-3xl lg:text-4xl font-black text-blue-600 tracking-tight leading-tight my-1">
-                  頂級架構師</h3>
-                <p class="font-sans text-xs sm:text-sm font-bold text-blue-950">把關核心系統與商業邏輯。</p>
-                <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                  梳理真實業務流程，杜絕規格理解落差與重複返工。</p>
-              </div>
-            </div>
-            <!-- Card 02 -->
-            <div
-              class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row gap-5 overflow-hidden transition-all hover:border-purple-300 hover:shadow-lg">
-              <div
-                class="w-full sm:w-48 aspect-[16/10] sm:aspect-square rounded-2xl overflow-hidden bg-surface-container relative shrink-0 border border-surface-variant/60">
-                <img alt="獨創 AI 智能體團隊" class="w-full h-full object-cover object-center"
-                  src="images/img_009_2d05c8666c.jpg" />
-                <div
-                  class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-purple-600 text-white font-mono text-xs font-bold">
-                  02</div>
-              </div>
-              <div class="flex flex-col justify-center gap-2">
-                <div
-                  class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-purple-600 uppercase tracking-tight">
-                  <span class="w-2 h-2 rounded-full bg-purple-600"></span>機器算力 ‧ 24H 協同
-                </div>
-                <h3
-                  class="font-sans text-2xl sm:text-3xl lg:text-4xl font-black text-purple-600 tracking-tight leading-tight my-1">
-                  AI 智能體</h3>
-                <p class="font-sans text-xs sm:text-sm font-bold text-purple-950">秒級程式碼生成，14天敏捷交付。</p>
-                <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                  自動化建模、除錯與調校，將數月流程壓縮至 14 天。</p>
-              </div>
-            </div>
-            <!-- Desktop '+' badge between Card 01 and Card 02 -->
-            <div
-              class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 via-primary to-purple-600 text-white shadow-[0_8px_24px_rgba(79,70,229,0.4)] items-center justify-center font-mono font-black pointer-events-none ring-4 ring-background border-2 border-white/80">
-              <span class="material-symbols-outlined text-[32px] font-black">add</span>
-            </div>
-          </div>
-          <!-- 2 大指標卡片 (70%時程 & 50%成本) -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            <!-- Metric 01 -->
-            <div
-              class="p-6 sm:p-8 rounded-3xl bg-surface-container-lowest border border-surface-variant shadow-sm flex flex-col justify-between gap-5">
-              <div class="flex items-center justify-between">
-                <div class="flex items-baseline gap-3">
-                  <span
-                    class="font-sans text-4xl sm:text-5xl font-black text-primary tracking-tighter leading-none">70%↓</span>
-                  <span
-                    class="font-mono text-xs font-bold text-primary uppercase px-3 py-1 rounded-full bg-primary-fixed/60 border border-primary-fixed-dim">極速開發</span>
-                </div>
-                <div
-                  class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20">
-                  <span class="material-symbols-outlined text-2xl">rocket_launch</span>
-                </div>
-              </div>
-              <div>
-                <h3 class="font-sans text-lg sm:text-xl text-on-surface font-extrabold mb-1.5">縮短 70% 開發時程</h3>
-                <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                  AI 自動產出程式碼，避開手工撰寫，迅速搶佔市場先機。
-                </p>
-              </div>
-              <div
-                class="p-4 rounded-2xl bg-surface-container-low border border-surface-variant/60 flex flex-col gap-3">
-                <div class="flex flex-col gap-1.5">
-                  <div class="flex justify-between font-mono text-xs">
-                    <span class="text-outline">傳統外包交付時程</span>
-                    <span class="font-semibold text-outline">60 ~ 90 天</span>
-                  </div>
-                  <div class="w-full h-2 rounded-full bg-surface-variant/60 overflow-hidden">
-                    <div class="h-full rounded-full bg-outline/40 w-full"></div>
-                  </div>
-                </div>
-                <div class="flex flex-col gap-1.5">
-                  <div class="flex justify-between font-mono text-xs">
-                    <span class="text-primary font-bold flex items-center gap-1">
-                      <span class="material-symbols-outlined text-sm">electric_bolt</span>
-                      鴻運算 AI 智能體
-                    </span>
-                    <span class="font-bold text-primary">最快 14 天交付</span>
-                  </div>
-                  <div class="w-full h-2.5 rounded-full bg-primary-fixed overflow-hidden">
-                    <div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary w-[25%] animate-pulse">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Metric 02 -->
-            <div
-              class="p-6 sm:p-8 rounded-3xl bg-surface-container-lowest border border-surface-variant shadow-sm flex flex-col justify-between gap-5">
-              <div class="flex items-center justify-between">
-                <div class="flex items-baseline gap-3">
-                  <span
-                    class="font-sans text-4xl sm:text-5xl font-black text-secondary tracking-tighter leading-none">50%↓</span>
-                  <span
-                    class="font-mono text-xs font-bold text-secondary uppercase px-3 py-1 rounded-full bg-secondary-fixed/50 border border-secondary-fixed-dim">成本砍半</span>
-                </div>
-                <div
-                  class="w-12 h-12 rounded-2xl bg-secondary-fixed/50 text-secondary flex items-center justify-center border border-secondary/20">
-                  <span class="material-symbols-outlined text-2xl">savings</span>
-                </div>
-              </div>
-              <div>
-                <h3 class="font-sans text-lg sm:text-xl text-on-surface font-extrabold mb-1.5">省下 15-30 萬預算</h3>
-                <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                  人機協同大幅減少工時與團隊建置費，讓預算節省 50%。
-                </p>
-              </div>
-              <div
-                class="flex items-center justify-between p-4 rounded-2xl bg-surface-container border border-surface-variant font-mono text-xs sm:text-sm">
-                <span class="text-outline">自動排障與驗證</span>
-                <span class="text-secondary font-bold flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-base">monetization_on</span>
-                  現省 50% 預算
-                </span>
-              </div>
-            </div>
-          </div>
-          <!-- Desktop Shortcut CTA Button Bar for Advantages -->
-          <div class="flex items-center justify-center pt-2">
-            <a class="inline-flex h-14 px-10 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-base lg:text-lg font-bold tracking-wide items-center justify-center gap-3 transition-all shadow-[0_8px_28px_rgba(53,37,205,0.3)] active:scale-95 hover:brightness-105 hover:shadow-xl"
-              href="#cta">
-              <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
-              <span>立即免費取得規格書與原型</span>
-              <span class="material-symbols-outlined text-2xl">arrow_forward</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= SECTION 03: 100% 全額免費交付兩大成果 (桌機) ================= -->
-      <section
-        class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-surface-container-low/70 border-y border-surface-variant/70 scroll-mt-20"
+        class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-surface-container-low/70 border-t border-surface-variant/70 scroll-mt-20"
         id="deliverables">
         <div class="max-w-7xl mx-auto flex flex-col gap-10 lg:gap-12">
           <div class="flex flex-col gap-3 text-center items-center">
-            <div
-              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-xs font-bold tracking-wider uppercase shadow-sm">
-              <span class="material-symbols-outlined text-[15px]">verified</span>免費體驗
-            </div>
             <h2 class="font-sans text-2xl sm:text-3xl lg:text-4xl text-on-surface font-black leading-snug">
               只要給我們一段話<br class="hidden sm:inline" />
-              <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">100%
-                免費交付兩大成果</span>
+              <span
+                class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">100%
+                免費交付兩大成果，讓您盡情比價</span>
             </h2>
             <p class="font-sans text-sm sm:text-base text-on-surface-variant max-w-xl leading-relaxed">
-              零費用 ‧ 零綁定 ‧ 不開發也免費贈送
+              零費用 ‧ 零綁定 ‧ 拿到規格書與原型後，歡迎拿去全台任意比價
             </p>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <!-- 左側主圖：情境照 + 1-2-3 流程疊加 -->
             <div
               class="lg:col-span-7 w-full rounded-3xl overflow-hidden shadow-[0_12px_36px_rgba(20,27,60,0.08)] border border-surface-variant/90 bg-surface-container-lowest group">
-              <div class="w-full aspect-[16/10] overflow-hidden relative">
+              <div class="w-full aspect-[16/11] overflow-hidden relative">
                 <img alt="創業者白話對話與 AI 智能解析藍圖情境圖"
                   class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
                   src="images/img_006_db5d93ffbd.jpg" />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/20"></div>
                 <div
-                  class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-surface-variant/80 shadow-sm flex items-center gap-1.5 text-primary font-mono text-xs font-bold">
-                  <span class="material-symbols-outlined text-base text-primary">chat_bubble</span>一段話 ➜ 轉化系統架構
+                  class="absolute top-4 left-4 sm:top-5 sm:left-5 bg-surface-container-lowest/95 backdrop-blur-md px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-primary/25 shadow-md flex items-center gap-2 text-primary font-sans text-sm sm:text-base font-extrabold tracking-tight">
+                  <span class="material-symbols-outlined text-lg sm:text-xl text-primary font-bold">chat_bubble</span>
+                  <span>一段話 ➜ 轉化系統架構</span>
                 </div>
-                <div class="absolute bottom-4 left-5 right-5 text-white flex items-center justify-between">
-                  <div>
-                    <div class="font-sans text-base font-extrabold drop-shadow">白話需求即規格</div>
-                    <div class="font-mono text-xs text-primary-fixed drop-shadow">AI 智能體為你精準解構產品邏輯</div>
+                <!-- 1-2-3 流程橫幅疊加在圖片底部 -->
+                <div class="absolute bottom-4 left-4 right-4 flex flex-col gap-2.5 text-left">
+                  <div class="grid grid-cols-3 gap-2.5">
+                    <!-- Step 1 -->
+                    <div
+                      class="p-3 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-white shadow-md flex flex-col gap-1 transition-all hover:scale-102">
+                      <div class="flex items-center gap-1.5">
+                        <span
+                          class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shrink-0 shadow-xs">1</span>
+                        <span
+                          class="font-sans text-sm sm:text-base lg:text-lg font-black text-primary tracking-tight whitespace-nowrap">說出想法</span>
+                      </div>
+                      <span
+                        class="font-sans text-xs sm:text-sm font-bold text-on-surface whitespace-nowrap">白話直述需求</span>
+                    </div>
+                    <!-- Step 2 -->
+                    <div
+                      class="p-3 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-white shadow-md flex flex-col gap-1 transition-all hover:scale-102">
+                      <div class="flex items-center gap-1.5">
+                        <span
+                          class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-black shrink-0 shadow-xs">2</span>
+                        <span
+                          class="font-sans text-sm sm:text-base lg:text-lg font-black text-primary tracking-tight whitespace-nowrap">快速轉化</span>
+                      </div>
+                      <span
+                        class="font-sans text-xs sm:text-sm font-bold text-on-surface whitespace-nowrap">規格書與原型</span>
+                    </div>
+                    <!-- Step 3 -->
+                    <div
+                      class="p-3 sm:p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-white shadow-md flex flex-col gap-1 transition-all hover:scale-102">
+                      <div class="flex items-center gap-1.5">
+                        <span
+                          class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-amber-500 text-white flex items-center justify-center text-xs font-black shrink-0 shadow-xs">3</span>
+                        <span
+                          class="font-sans text-sm sm:text-base lg:text-lg font-black text-amber-600 tracking-tight whitespace-nowrap">全台比價</span>
+                      </div>
+                      <span
+                        class="font-sans text-xs sm:text-sm font-bold text-amber-700 whitespace-nowrap">拿去盡情比價</span>
+                    </div>
                   </div>
-                  <span class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-xl">auto_awesome</span>
-                  </span>
+                  <div
+                    class="p-2.5 sm:p-3 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md border border-white/80 flex items-center justify-between text-xs sm:text-sm">
+                    <span class="font-sans font-extrabold text-on-surface flex items-center gap-1.5">
+                      <span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>白話需求即規格，AI
+                      精準解構商業架構
+                    </span>
+                    <span class="font-mono text-xs sm:text-sm text-primary font-bold">100% 免費交付</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1429,12 +1296,11 @@
                 <div>
                   <div class="flex items-center gap-2 text-blue-600 mb-1">
                     <span class="material-symbols-outlined text-2xl sm:text-3xl">description</span>
-                    <h3
-                      class="font-sans text-2xl sm:text-3xl lg:text-4xl font-black text-blue-600 tracking-tight leading-tight">
+                    <h3 class="font-sans text-2xl sm:text-3xl font-black text-blue-600 tracking-tight leading-tight">
                       專屬系統規格書</h3>
                   </div>
                   <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                    白話轉為標準架構與資料表設計，可直接發包。
+                    白話轉為標準架構、API 定義與資料表設計，可直接作為驗收或發包標準。
                   </p>
                 </div>
                 <div
@@ -1462,12 +1328,11 @@
                 <div>
                   <div class="flex items-center gap-2 text-purple-600 mb-1">
                     <span class="material-symbols-outlined text-2xl sm:text-3xl">devices</span>
-                    <h3
-                      class="font-sans text-2xl sm:text-3xl lg:text-4xl font-black text-purple-600 tracking-tight leading-tight">
+                    <h3 class="font-sans text-2xl sm:text-3xl font-black text-purple-600 tracking-tight leading-tight">
                       UI/UX 原型設計</h3>
                   </div>
                   <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                    高擬真可點擊介面，方便團隊簡報與展示。
+                    高擬真可點擊介面，方便團隊討論、募資簡報與前期市場驗證。
                   </p>
                 </div>
                 <div
@@ -1478,64 +1343,346 @@
               </div>
             </div>
           </div>
-          <!-- 誠信保證卡 (列舉說明) -->
-          <div
-            class="p-6 sm:p-8 rounded-3xl bg-surface-container-lowest border-2 border-primary/20 shadow-md flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-4">
-              <div
-                class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0 border border-primary/20">
-                <span class="material-symbols-outlined text-2xl">verified_user</span>
-              </div>
-              <div class="text-center sm:text-left">
-                <h4 class="font-sans text-base sm:text-lg font-extrabold text-on-surface">鴻運算誠信保證：三不原則</h4>
-                <p class="font-sans text-xs sm:text-sm text-on-surface-variant">零費用、零綁定、完全透明。</p>
-              </div>
-            </div>
-            <div
-              class="flex flex-wrap items-center justify-center sm:justify-end gap-3 text-xs font-mono font-bold text-on-surface">
-              <span
-                class="px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
-                <span class="material-symbols-outlined text-sm">check</span>不收諮詢費
-              </span>
-              <span
-                class="px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
-                <span class="material-symbols-outlined text-sm">check</span>不強制簽約
-              </span>
-              <span
-                class="px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
-                <span class="material-symbols-outlined text-sm">check</span>成果100%歸您
-              </span>
-            </div>
-          </div>
+
           <!-- Desktop Shortcut CTA Button Bar -->
           <div class="flex items-center justify-center pt-2">
             <a class="inline-flex h-14 px-10 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-base lg:text-lg font-bold tracking-wide items-center justify-center gap-3 transition-all shadow-[0_8px_28px_rgba(53,37,205,0.3)] active:scale-95 hover:brightness-105 hover:shadow-xl"
               href="#cta">
               <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
-              <span>立即免費取得規格書與原型</span>
-              <span class="material-symbols-outlined text-2xl">arrow_forward</span>
+              <span>免費取得規格與原型，讓您盡情<span
+                  class="text-amber-300 font-black px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+                →</span>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- ================= SECTION 04: 系統展示 DEMO (桌機) ================= -->
-      <section class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-background scroll-mt-20" id="demo">
-        <div class="max-w-7xl mx-auto flex flex-col gap-8 lg:gap-12">
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div class="flex flex-col gap-2 text-left">
+      <!-- ================= SECTION 02: 獨創「雙引擎」 ‧ 實現真正「雙 7 OFF」 (桌機) ================= -->
+      <section class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-background border-t border-surface-variant/70 scroll-mt-20"
+        id="advantages">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10 lg:gap-14">
+          <div class="flex flex-col gap-3 text-center items-center">
+            <h2
+              class="font-sans text-2xl sm:text-3xl lg:text-4xl text-on-surface font-black tracking-tight leading-snug">
+              獨創<span class="text-primary font-black">「雙引擎」</span><br class="hidden sm:inline" />
+              <span
+                class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">實現真正「雙
+                7 OFF」</span>
+            </h2>
+            <p class="font-sans text-sm sm:text-base text-on-surface-variant max-w-xl leading-relaxed">
+              20年頂級架構師 + AI 智能體流水線，打破傳統外包限制
+            </p>
+          </div>
+          <!-- 架構雙卡 (人類工程師 + AI 智能體) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 relative">
+            <!-- Card 01 -->
+            <div
+              class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row gap-5 overflow-hidden transition-all hover:border-blue-300 hover:shadow-lg">
               <div
-                class="inline-flex items-center gap-1.5 text-primary font-mono text-xs font-bold uppercase tracking-wider">
-                <span class="material-symbols-outlined text-[16px]">grid_view</span>實體展示
+                class="w-full sm:w-48 aspect-[16/10] sm:aspect-square rounded-2xl overflow-hidden bg-surface-container relative shrink-0 border border-surface-variant/60">
+                <img alt="20年資深頂級工程師" class="w-full h-full object-cover object-top"
+                  src="images/architect_portrait.jpg" />
+                <div
+                  class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-blue-600 text-white font-mono text-xs font-bold">
+                  01</div>
               </div>
-              <h2 class="font-sans text-2xl sm:text-3xl lg:text-4xl text-on-surface font-black tracking-tight">系統展示 Demo
-              </h2>
-              <p class="font-sans text-xs sm:text-sm text-on-surface-variant">鴻運算實際開發交付系統，真實展示現代科技架構。</p>
+              <div class="flex flex-col justify-center gap-2">
+                <div
+                  class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-blue-600 uppercase tracking-tight">
+                  <span class="w-2 h-2 rounded-full bg-blue-600"></span>人類經驗 ‧ 20 年資深
+                </div>
+                <h3
+                  class="font-sans text-2xl sm:text-3xl lg:text-4xl font-black text-blue-600 tracking-tight leading-tight my-1">
+                  頂級架構師</h3>
+                <p class="font-sans text-xs sm:text-sm font-bold text-blue-950">把關核心系統與商業邏輯。</p>
+                <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  親自梳理真實業務流程，杜絕規格理解落差與重複返工。</p>
+              </div>
+            </div>
+            <!-- Card 02 -->
+            <div
+              class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row gap-5 overflow-hidden transition-all hover:border-purple-300 hover:shadow-lg">
+              <div
+                class="w-full sm:w-48 aspect-[16/10] sm:aspect-square rounded-2xl overflow-hidden bg-surface-container relative shrink-0 border border-surface-variant/60">
+                <img alt="獨創 AI 智能體團隊" class="w-full h-full object-cover object-center"
+                  src="images/img_009_2d05c8666c.jpg" />
+                <div
+                  class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-purple-600 text-white font-mono text-xs font-bold">
+                  02</div>
+              </div>
+              <div class="flex flex-col justify-center gap-2">
+                <div
+                  class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-purple-600 uppercase tracking-tight">
+                  <span class="w-2 h-2 rounded-full bg-purple-600"></span>機器算力 ‧ 24H 協同
+                </div>
+                <h3
+                  class="font-sans text-2xl sm:text-3xl lg:text-4xl font-black text-purple-600 tracking-tight leading-tight my-1">
+                  AI 智能體</h3>
+                <p class="font-sans text-xs sm:text-sm font-bold text-purple-950">秒級程式碼生成，最快 14 天交付。</p>
+                <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  自動化建模、除錯與調校，將數月流程壓縮至 14 天。</p>
+              </div>
+            </div>
+            <!-- Desktop '+' badge between Card 01 and Card 02 -->
+            <div
+              class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 via-primary to-purple-600 text-white shadow-[0_8px_24px_rgba(79,70,229,0.4)] items-center justify-center font-mono font-black pointer-events-none ring-4 ring-background border-2 border-white/80">
+              <span class="material-symbols-outlined text-[32px] font-black">add</span>
+            </div>
+          </div>
+          <!-- 2 大指標卡片 (全面更新為 雙 7 OFF) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            <!-- Metric 01: 時間 70% OFF -->
+            <div
+              class="p-6 sm:p-8 rounded-3xl bg-surface-container-lowest border border-surface-variant shadow-sm flex flex-col justify-between gap-5">
+              <div class="flex items-center justify-between">
+                <div class="flex items-baseline gap-3">
+                  <span class="font-sans text-4xl sm:text-5xl font-black text-primary tracking-tighter leading-none">70%
+                    OFF</span>
+                  <span
+                    class="font-mono text-xs font-bold text-primary uppercase px-3 py-1 rounded-full bg-primary-fixed/60 border border-primary-fixed-dim">時間
+                    70% OFF</span>
+                </div>
+                <div
+                  class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20">
+                  <span class="material-symbols-outlined text-2xl">bolt</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="font-sans text-lg sm:text-xl text-on-surface font-extrabold mb-1.5">時間 70% OFF ‧ 最快 14 天交付
+                </h3>
+                <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  AI 智能體秒級產出代碼，避開傳統漫長等待期，讓新創快速搶佔市場先機。
+                </p>
+              </div>
+              <div
+                class="p-4 rounded-2xl bg-surface-container-low border border-surface-variant/60 flex flex-col gap-3">
+                <div class="flex flex-col gap-1.5">
+                  <div class="flex justify-between font-mono text-xs">
+                    <span class="text-outline">傳統外包交付時程</span>
+                    <span class="font-semibold text-outline">60 ~ 90 天</span>
+                  </div>
+                  <div class="w-full h-2 rounded-full bg-surface-variant/60 overflow-hidden">
+                    <div class="h-full rounded-full bg-outline/40 w-full"></div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <div class="flex justify-between font-mono text-xs">
+                    <span class="text-primary font-bold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-sm">electric_bolt</span>
+                      鴻運算雙引擎流水線
+                    </span>
+                    <span class="font-bold text-primary">最快 14 天交付</span>
+                  </div>
+                  <div class="w-full h-2.5 rounded-full bg-primary-fixed overflow-hidden">
+                    <div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary w-[25%] animate-pulse">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Metric 02: 成本 70% OFF -->
+            <div
+              class="p-6 sm:p-8 rounded-3xl bg-surface-container-lowest border border-surface-variant shadow-sm flex flex-col justify-between gap-5">
+              <div class="flex items-center justify-between">
+                <div class="flex items-baseline gap-3">
+                  <span
+                    class="font-sans text-4xl sm:text-5xl font-black text-emerald-800 tracking-tighter leading-none">70%
+                    OFF</span>
+                  <span
+                    class="font-mono text-xs font-bold text-emerald-800 uppercase px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300">成本
+                    70% OFF</span>
+                </div>
+                <div
+                  class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center border border-emerald-300/50">
+                  <span class="material-symbols-outlined text-2xl">savings</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="font-sans text-lg sm:text-xl text-on-surface font-extrabold mb-1.5">成本 70% OFF ‧ 現省 15-30 萬
+                </h3>
+                <p class="font-sans text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  人機協同大幅省去冗餘人力與團隊建置費，讓首期試錯負擔直接省下 70%。
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-between p-4 rounded-2xl bg-surface-container border border-surface-variant font-mono text-xs sm:text-sm">
+                <span class="text-outline">傳統建置 vs 雙引擎極速試錯</span>
+                <span class="text-emerald-800 font-bold flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-base">monetization_on</span>
+                  現省 15-30 萬預算
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Desktop Shortcut CTA Button Bar for Advantages -->
+          <div class="flex items-center justify-center pt-2">
+            <a class="inline-flex h-14 px-10 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-base lg:text-lg font-bold tracking-wide items-center justify-center gap-3 transition-all shadow-[0_8px_28px_rgba(53,37,205,0.3)] active:scale-95 hover:brightness-105 hover:shadow-xl"
+              href="#cta">
+              <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+              <span>免費取得規格與原型，讓您盡情<span
+                  class="text-amber-300 font-black px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+                →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 03: 新創做系統 ‧ 避開 AI 陷阱 (桌機) ================= -->
+      <section
+        class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-surface-container-low/60 border-t border-surface-variant/70 scroll-mt-20"
+        id="pain-points">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10 lg:gap-14">
+          <!-- Section Header -->
+          <div class="flex flex-col gap-3 text-center items-center">
+            <h2
+              class="font-sans text-2xl sm:text-3xl lg:text-4xl text-on-surface font-black tracking-tight leading-snug">
+              新創做系統<br class="hidden sm:inline" />
+              <span class="bg-gradient-to-r from-rose-600 via-primary to-secondary bg-clip-text text-transparent">避開 AI
+                陷阱</span>
+            </h2>
+            <p class="font-sans text-sm sm:text-base text-on-surface-variant max-w-xl leading-relaxed">
+              單靠 AI 盲目生成只會做出無法上線的玩具，要穩健落地需要雙引擎
+            </p>
+          </div>
+
+          <!-- 鴻運算核心信仰 (優雅大器橫幅) -->
+          <div
+            class="w-full p-6 sm:p-8 rounded-3xl bg-surface-container-lowest border border-primary/20 shadow-[0_8px_32px_rgba(53,37,205,0.06)] relative overflow-hidden text-left">
+            <div
+              class="absolute -right-12 -bottom-12 w-64 h-64 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl pointer-events-none">
             </div>
             <span
-              class="font-mono text-xs text-primary bg-primary-fixed/60 px-3 py-1.5 rounded-full font-bold self-start md:self-auto shrink-0">
-              6 大核心系統 ‧ 完整 20 大內頁 Demo
-            </span>
+              class="material-symbols-outlined absolute right-6 -bottom-6 text-[110px] text-primary/5 select-none pointer-events-none font-black">format_quote</span>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 relative z-10">
+              <div
+                class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0 border border-primary/20 shadow-sm">
+                <span class="material-symbols-outlined text-3xl">format_quote</span>
+              </div>
+              <div class="flex flex-col gap-1.5 text-center sm:text-left">
+                <span
+                  class="font-mono text-xs uppercase tracking-wider text-primary font-bold flex items-center justify-center sm:justify-start gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>鴻運算核心信仰
+                </span>
+                <p
+                  class="font-sans text-xl sm:text-2xl lg:text-3xl font-black leading-snug tracking-tight text-on-surface">
+                  「好的創業想法，<span
+                    class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">不該被開發速度與昂貴成本限制。</span>」
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI 陷阱警示與破局公式 (2 欄對稱排版) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- 左欄：單一 AI 陷阱卡片 -->
+            <div class="lg:col-span-6 w-full">
+              <div
+                class="rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-sm p-6 flex flex-col gap-4 text-left">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-4 rounded-full bg-rose-500"></span>
+                    <span class="font-sans text-lg font-black text-on-surface tracking-tight">小心 <span
+                        class="text-rose-600">AI 陷阱</span></span>
+                  </div>
+                  <span
+                    class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-rose-50 border border-rose-200/80 text-rose-600 font-mono text-xs font-bold">
+                    <span class="material-symbols-outlined text-[14px]">warning</span>避坑提醒
+                  </span>
+                </div>
+                <div
+                  class="w-full aspect-[16/9] rounded-2xl overflow-hidden relative bg-surface-container border border-surface-variant/60 shadow-inner">
+                  <img alt="不懂技術，AI亂生成"
+                    class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
+                    src="images/img_082_a239577df1.jpg" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                  <div class="absolute top-3 left-3 flex items-center gap-1.5">
+                    <span
+                      class="w-6 h-6 rounded-lg bg-rose-600 text-white font-mono text-xs font-black flex items-center justify-center shadow-sm">!</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-slate-900/80 backdrop-blur-md text-white font-mono text-[10px] font-bold border border-white/20">AI
+                      陷阱</span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center gap-2 text-rose-600">
+                    <span class="material-symbols-outlined text-xl">error</span>
+                    <h3 class="font-sans text-xl font-extrabold text-on-surface tracking-tight">
+                      不懂技術，AI亂生成
+                    </h3>
+                  </div>
+                  <p class="font-sans text-xs text-on-surface-variant leading-relaxed">
+                    即便是工程師用 AI 寫程式，最常踩進這道看似省錢實是坑：單靠 AI 盲目生成只會做出無法上線的玩具。
+                  </p>
+                </div>
+                <div class="p-4 rounded-2xl bg-surface-container-low border border-primary/20 flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 border border-primary/20 mt-0.5">
+                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                  </div>
+                  <div class="flex flex-col gap-1 text-xs font-sans leading-relaxed text-on-surface">
+                    <div class="flex items-center gap-2">
+                      <span class="font-bold text-primary">鴻運算解法</span>
+                      <span
+                        class="px-2 py-0.5 rounded-full bg-white border border-primary/40 text-primary text-[10px] font-black tracking-tight leading-none shadow-xs">雙引擎把關</span>
+                    </div>
+                    <span class="text-on-surface-variant text-[12px] leading-relaxed">沒有雙引擎（頂級架構師 + AI 智能體），單靠 AI
+                      只會亂生成！我們由 20 年架構師親自驗證底層邏輯，才能穩健實現「雙 7 OFF」極速試錯。</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 右欄：想要雙 7 OFF 核心強調 (無框開放式設計，集中醒目) -->
+            <div class="lg:col-span-6 w-full flex flex-col items-center text-center px-6 lg:px-12 gap-5">
+              <div class="flex items-center justify-center">
+                <span
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/25 text-primary font-mono text-xs font-bold uppercase tracking-wider">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>破局關鍵公式
+                </span>
+              </div>
+              <div class="flex flex-col gap-2 items-center text-center">
+                <span class="font-mono text-sm font-bold text-on-surface-variant uppercase tracking-wider">
+                  想要新創做系統真正極速試錯？
+                </span>
+                <h3
+                  class="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-on-surface tracking-tight leading-tight">
+                  想要「雙 7 OFF」？<br />
+                  <span class="text-primary font-black">時間 70% OFF</span>，<br />
+                  <span class="text-emerald-700 font-black">成本 70% OFF</span>，<br />
+                  <span
+                    class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">就要「雙引擎」！</span>
+                </h3>
+              </div>
+              <p class="font-sans text-xs sm:text-sm text-on-surface-variant max-w-md leading-relaxed">
+                20 年頂級架構師精準把關核心邏輯 ＋ AI 智能體秒級生成代碼，才能真正兼顧品質與極致成本。
+              </p>
+            </div>
+          </div>
+
+          <!-- Desktop Shortcut CTA Button Bar -->
+          <div class="flex items-center justify-center pt-2">
+            <a class="inline-flex h-14 px-10 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-base lg:text-lg font-bold tracking-wide items-center justify-center gap-3 transition-all shadow-[0_8px_28px_rgba(53,37,205,0.3)] active:scale-95 hover:brightness-105 hover:shadow-xl"
+              href="#cta">
+              <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+              <span>免費取得規格與原型，讓您盡情<span
+                  class="text-amber-300 font-black px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+                →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 04: 系統展示 DEMO ‧ 體驗預期成果 (桌機) ================= -->
+      <section class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-background scroll-mt-20" id="demo">
+        <div class="max-w-7xl mx-auto flex flex-col gap-8 lg:gap-12">
+          <div class="flex flex-col items-center text-center gap-2">
+            <h2
+              class="font-sans text-2xl sm:text-3xl lg:text-4xl text-on-surface font-black tracking-tight leading-snug">
+              系統展示 Demo<br />
+              <span class="text-primary text-xl sm:text-2xl lg:text-3xl font-extrabold">體驗預期成果</span>
+            </h2>
+            <p class="font-sans text-xs sm:text-sm text-on-surface-variant max-w-lg">鴻運算實際開發交付系統，真實展示現代科技架構，歡迎親自體驗成果。
+            </p>
           </div>
           <!-- Filter Tabs -->
           <div class="flex flex-wrap items-center gap-2 border-b border-surface-variant/70 pb-4">
@@ -1822,22 +1969,14 @@
               </div>
             </a>
           </div>
-          <!-- Bottom link bar -->
-          <div
-            class="p-4 sm:p-5 rounded-3xl bg-surface-container-lowest border border-surface-variant flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-2xl">auto_awesome</span>
-              </div>
-              <div>
-                <h4 class="font-sans text-sm sm:text-base font-bold text-on-surface">想客製化專屬於你的獨特商業架構？</h4>
-                <p class="font-sans text-xs text-on-surface-variant">給我們一段話，AI 智能體團隊最快 14 天為您全面落地上線。</p>
-              </div>
-            </div>
-            <a class="shrink-0 px-6 py-2.5 rounded-full bg-primary text-white font-sans text-xs sm:text-sm font-bold flex items-center gap-1.5 shadow-md shadow-primary/20 hover:bg-primary/90 transition-all"
+          <!-- Desktop Shortcut CTA Button Bar for Demo -->
+          <div class="flex items-center justify-center pt-4">
+            <a class="inline-flex h-14 px-10 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-base lg:text-lg font-bold tracking-wide items-center justify-center gap-3 transition-all shadow-[0_8px_28px_rgba(53,37,205,0.3)] active:scale-95 hover:brightness-105 hover:shadow-xl"
               href="#cta">
-              <span>免費取得評估</span>
-              <span class="material-symbols-outlined text-base">arrow_forward</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+              <span>免費取得規格與原型，讓您盡情<span
+                  class="text-amber-300 font-black px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+                →</span>
             </a>
           </div>
         </div>
@@ -1846,99 +1985,106 @@
 
     <!-- ================= SECTION 05: 通用轉化引導區 (CTA) ================= -->
     <section
-      class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-gradient-to-b from-surface-container-low/80 to-background border-t border-surface-variant/70 scroll-mt-20"
+      class="px-4 sm:px-6 lg:px-8 py-14 lg:py-20 bg-gradient-to-b from-surface-container-low/80 to-background border-t border-surface-variant/70 scroll-mt-20"
       id="cta">
-      <div class="max-w-4xl mx-auto flex flex-col gap-8 text-center items-center">
-        <div
-          class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-xs font-bold tracking-wider uppercase shadow-sm">
-          <span class="material-symbols-outlined text-base">rocket_launch</span>立即免費開始
-        </div>
-        <h2 class="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-on-surface tracking-tight leading-tight">
-          懂想法，就夠了。<br />
+      <div class="max-w-3xl mx-auto flex flex-col gap-6 text-center items-center">
+        <!-- <div
+          class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest border border-surface-variant text-primary font-mono text-[11px] font-bold tracking-wider uppercase shadow-sm">
+          <span class="material-symbols-outlined text-[14px]">rocket_launch</span>立即免費開始
+        </div> -->
+        <h2
+          class="font-sans text-[26px] sm:text-3xl lg:text-4xl font-extrabold text-on-surface tracking-tight leading-snug">
+          說出想法，<br class="sm:hidden" />
           <span
-            class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">免費開啟你的專屬系統</span>
+            class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">免費取得規格與原型，讓您盡情比價</span>
         </h2>
-        <p class="font-sans text-sm sm:text-base text-on-surface-variant max-w-xl leading-relaxed">
-          填寫一段話，免費獲得專屬規格書與擬真原型。<br class="hidden sm:inline" />
-          拿著規格書任意比價，零風險、零壓力。
+        <p class="font-sans text-[13px] text-on-surface-variant max-w-md leading-relaxed">
+          100% 免費交付 ‧ 零綁定 ‧ 拿到後歡迎拿去全台比價
         </p>
-        <!-- Conversion Input Card -->
+
+        <!-- Conversion Input Card (精簡、低負擔、條列範例) -->
         <div
-          class="w-full p-6 sm:p-8 rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-xl flex flex-col gap-4 text-left">
-          <label class="font-sans text-sm font-bold text-on-surface flex items-center justify-between"
-            for="user-prompt">
-            <span>請在下方寫下一段話（白話描述你想做的功能）：</span>
-            <span class="font-mono text-xs text-primary font-semibold">100% 免費交付</span>
-          </label>
-          <!-- 示範情境快速點選區塊 -->
-          <div class="w-full flex flex-col gap-2.5 pb-2 border-b border-surface-variant/60">
-            <div class="flex items-center justify-between px-1">
-              <span class="font-mono text-xs font-bold text-primary flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-base">lightbulb</span>不知道怎麼說？點擊查看範例：
+          class="w-full p-5 sm:p-7 rounded-3xl bg-surface-container-lowest border border-surface-variant/90 shadow-xl flex flex-col gap-4 text-left">
+          <div class="flex items-center justify-between">
+            <label class="font-sans text-[14px] font-bold text-on-surface flex items-center gap-1.5" for="user-prompt">
+              <span class="material-symbols-outlined text-primary text-[18px]">edit_note</span>您的系統需求：
+            </label>
+            <span
+              class="font-mono text-[10px] text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full font-bold border border-emerald-200">條列
+              2~3 點即可</span>
+          </div>
+
+          <!-- 條列式範例快速套用區塊 -->
+          <div class="flex flex-col gap-1.5 pb-2 border-b border-surface-variant/60">
+            <div class="flex items-center justify-between px-0.5">
+              <span class="font-mono text-[11px] font-bold text-primary flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px] text-amber-500">lightbulb</span>點擊快速套用條列範例：
               </span>
-              <span class="font-mono text-[10px] text-outline">點擊查看產出</span>
+              <span class="font-mono text-[10px] text-outline">點擊直接帶入需求</span>
             </div>
-            <div class="grid grid-cols-3 gap-2 sm:gap-3">
-              <button type="button" onclick="openIdeaModal('ecommerce')"
-                class="p-2.5 sm:p-3 rounded-2xl bg-surface-container-low border border-surface-variant hover:border-primary/50 text-left flex flex-col gap-1 transition-all active:scale-95 shadow-sm group">
-                <div
-                  class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center">
-                  <span class="material-symbols-outlined text-[15px] sm:text-base">shopping_bag</span>
+            <div class="grid grid-cols-3 gap-2">
+              <button type="button" onclick="applyPreset('ecommerce')"
+                class="p-2 sm:p-2.5 rounded-xl bg-surface-container-low border border-surface-variant hover:border-primary/50 text-left flex items-center gap-1.5 transition-all active:scale-95 group shadow-xs">
+                <div class="w-6 h-6 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[14px]">shopping_bag</span>
                 </div>
-                <div
-                  class="font-sans text-[11px] sm:text-xs font-bold text-on-surface line-clamp-1 group-hover:text-primary">
-                  電商購物系統</div>
-                <div class="font-mono text-[9px] sm:text-[10px] text-outline truncate">茶葉小農‧紅利點數</div>
+                <span
+                  class="font-sans text-[11px] sm:text-xs font-bold text-on-surface group-hover:text-primary truncate">電商購物</span>
               </button>
-              <button type="button" onclick="openIdeaModal('booking')"
-                class="p-2.5 sm:p-3 rounded-2xl bg-surface-container-low border border-surface-variant hover:border-purple-200 text-left flex flex-col gap-1 transition-all active:scale-95 shadow-sm group">
-                <div
-                  class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center">
-                  <span class="material-symbols-outlined text-[15px] sm:text-base">calendar_month</span>
+              <button type="button" onclick="applyPreset('booking')"
+                class="p-2 sm:p-2.5 rounded-xl bg-surface-container-low border border-surface-variant hover:border-purple-200 text-left flex items-center gap-1.5 transition-all active:scale-95 group shadow-xs">
+                <div class="w-6 h-6 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[14px]">calendar_month</span>
                 </div>
-                <div
-                  class="font-sans text-[11px] sm:text-xs font-bold text-on-surface line-clamp-1 group-hover:text-purple-600">
-                  美業預約平台</div>
-                <div class="font-mono text-[9px] sm:text-[10px] text-outline truncate">設計師班表‧訂金</div>
+                <span
+                  class="font-sans text-[11px] sm:text-xs font-bold text-on-surface group-hover:text-purple-600 truncate">線上預約</span>
               </button>
-              <button type="button" onclick="openIdeaModal('membership')"
-                class="p-2.5 sm:p-3 rounded-2xl bg-surface-container-low border border-surface-variant hover:border-emerald-200 text-left flex flex-col gap-1 transition-all active:scale-95 shadow-sm group">
+              <button type="button" onclick="applyPreset('membership')"
+                class="p-2 sm:p-2.5 rounded-xl bg-surface-container-low border border-surface-variant hover:border-emerald-200 text-left flex items-center gap-1.5 transition-all active:scale-95 group shadow-xs">
                 <div
-                  class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                  <span class="material-symbols-outlined text-[15px] sm:text-base">card_membership</span>
+                  class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[14px]">card_membership</span>
                 </div>
-                <div
-                  class="font-sans text-[11px] sm:text-xs font-bold text-on-surface line-clamp-1 group-hover:text-emerald-600">
-                  會員成長系統</div>
-                <div class="font-mono text-[9px] sm:text-[10px] text-outline truncate">任務積點‧優惠兌換</div>
+                <span
+                  class="font-sans text-[11px] sm:text-xs font-bold text-on-surface group-hover:text-emerald-600 truncate">會員積點</span>
               </button>
             </div>
           </div>
+
           <textarea
-            class="w-full p-4 rounded-2xl bg-surface-container-low border border-surface-variant focus:border-primary focus:ring-2 focus:ring-primary/20 text-sm font-sans text-on-surface placeholder:text-outline/70 transition-all outline-none resize-none"
-            id="user-prompt" name="entry.1322477265" placeholder="例如：我想做一個專門賣有機茶葉的電商平台，需要會員紅利、LINE Pay 結帳與黑貓自動列印物流標籤..."
+            class="w-full p-3.5 sm:p-4 rounded-2xl bg-surface-container-low border border-surface-variant focus:border-primary focus:ring-2 focus:ring-primary/20 text-[13px] font-sans text-on-surface placeholder:text-outline/60 transition-all outline-none resize-none leading-relaxed"
+            id="user-prompt" name="entry.1322477265"
+            placeholder="條列 2~3 點即可（例如）：&#10;1. 品牌電商購物系統&#10;2. 需會員紅利累積、LINE Pay / 信用卡結帳&#10;3. 自動列印黑貓物流標籤"
             rows="4"></textarea>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             <input
-              class="w-full px-4 py-3 rounded-xl bg-surface-container-low border border-surface-variant focus:border-primary text-sm font-sans outline-none"
-              id="user-name" name="entry.108463740" placeholder="您的姓名或稱呼（例：陳先生）" type="text" />
+              class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-low border border-surface-variant focus:border-primary text-[13px] font-sans outline-none"
+              id="user-name" name="entry.108463740" placeholder="稱呼（例：陳先生）" type="text" />
             <input
-              class="w-full px-4 py-3 rounded-xl bg-surface-container-low border border-surface-variant focus:border-primary text-sm font-sans outline-none"
-              id="user-contact" name="entry.1834548566" placeholder="聯絡電話或 LINE ID" type="text" />
+              class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-low border border-surface-variant focus:border-primary text-[13px] font-sans outline-none"
+              id="user-contact" name="entry.1834548566" placeholder="電話或 LINE ID" type="text" />
             <input
-              class="w-full px-4 py-3 rounded-xl bg-surface-container-low border border-surface-variant focus:border-primary text-sm font-sans outline-none"
-              id="user-email" name="entry.443296380" placeholder="電子郵件 Email（例：service@example.com）" type="email" />
+              class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-low border border-surface-variant focus:border-primary text-[13px] font-sans outline-none"
+              id="user-email" name="entry.443296380" placeholder="Email 電子郵件" type="email" />
           </div>
+
           <button
-            class="w-full min-h-[50px] py-3.5 px-6 rounded-2xl bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-base font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/25 hover:brightness-105 active:scale-[0.99] transition-all"
+            class="w-full min-h-[50px] py-3.5 px-6 rounded-2xl bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-[15px] font-bold flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(53,37,205,0.28)] hover:brightness-105 active:scale-[0.98] transition-all"
             id="submit-btn" type="button">
-            <span>立即免費取得規格書與原型 →</span>
+            <span class="w-2 h-2 rounded-full bg-white animate-ping shrink-0"></span>
+            <span>免費取得規格與原型，讓您盡情<span
+                class="text-amber-300 font-black text-[16px] px-1.5 py-0.5 rounded-md bg-white/20 border border-amber-300/50 shadow-sm mx-0.5 inline-block">比價</span>
+              →</span>
           </button>
-          <div class="flex items-center justify-center gap-6 font-mono text-xs text-outline pt-2">
+
+          <div class="flex items-center justify-center gap-4 sm:gap-6 font-mono text-[11px] text-outline pt-1">
             <span class="flex items-center gap-1"><span
                 class="material-symbols-outlined text-sm text-emerald-600">lock</span>個資嚴格保密</span>
             <span class="flex items-center gap-1"><span
-                class="material-symbols-outlined text-sm text-primary">schedule</span>24 小時內極速回覆</span>
+                class="material-symbols-outlined text-sm text-primary">schedule</span>24H 內極速交付</span>
+            <span class="flex items-center gap-1"><span
+                class="material-symbols-outlined text-sm text-amber-500">price_check</span>零綁定自由比價</span>
           </div>
         </div>
       </div>
@@ -1947,7 +2093,7 @@
 
   <!-- ================= MOBILE FOOTER ================= -->
   <footer
-    class="block md:hidden w-full bg-surface-container-lowest border-t border-surface-variant/80 px-4 py-8 flex flex-col gap-4 mt-2 max-w-lg mx-auto text-left">
+    class="block lg:hidden w-full bg-surface-container-lowest border-t border-surface-variant/80 px-4 py-8 flex flex-col gap-4 mt-2 max-w-lg md:max-w-2xl mx-auto text-left">
     <div class="flex flex-col gap-1.5">
       <div class="flex items-center gap-2">
         <div
@@ -1973,7 +2119,7 @@
 
   <!-- ================= DESKTOP FOOTER ================= -->
   <footer
-    class="hidden md:block w-full bg-surface-container-lowest border-t border-surface-variant/80 py-12 px-4 sm:px-6 lg:px-8">
+    class="hidden lg:block w-full bg-surface-container-lowest border-t border-surface-variant/80 py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto flex flex-col gap-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         <!-- Col 1: Brand -->
@@ -2060,7 +2206,7 @@
               <span class="material-symbols-outlined text-[13px]">content_copy</span>複製此範例
             </button>
           </div>
-          <p class="font-sans text-xs sm:text-sm text-blue-950 leading-relaxed font-medium bg-white/80 p-3 rounded-xl border border-blue-200/60"
+          <p class="font-sans text-xs sm:text-sm text-blue-950 leading-relaxed font-medium bg-white/80 p-3 rounded-xl border border-blue-200/60 whitespace-pre-line"
             id="modal-prompt-text"></p>
         </div>
         <div class="flex flex-col gap-3">
@@ -2152,44 +2298,60 @@
       });
     }
 
-    // Idea Preset Modal Logic
+    // Idea Preset Modal & Quick-Apply Logic (條列式範例)
     const IDEA_PRESETS = {
       ecommerce: {
         title: '電商購物系統範例',
-        subtitle: '有機小農茶葉電商 ‧ 會員紅利與金流物流',
-        prompt: '我想做一個專門賣有機小農茶葉的電商平台，需要有會員分級累積紅利、滿千免運、支援 LINE Pay / 信用卡結帳，後台可以自動印黑貓物流單與查看每週熱銷排行，手機上買茶體驗要很絲滑。',
+        subtitle: '品牌商城 ‧ 會員紅利與金物流',
+        prompt: '我想做：品牌電商購物系統\n1. 需求：小農茶葉線上商城，手機瀏覽與選購要絲滑\n2. 功能：會員累積紅利點數、滿千免運、商品分類搜尋\n3. 串接：LINE Pay / 信用卡結帳，後台自動印黑貓物流寄件單',
         specs: [
-          '• 核心架構：分類篩選、會員中心、購物車結帳、後台商品/庫存管理',
-          '• 商業邏輯：會員階級累點規則、優惠折扣碼組合演算法、訂單拆單機制',
-          '• 串接架構：綠界/LINE Pay 金流 API、黑貓宅急便物流標籤列印、電子發票'
+          '• 核心架構：商品型錄、分類篩選、會員中心、購物車結帳、庫存管理',
+          '• 商業邏輯：會員階級累點機制、滿額折扣碼組合、訂單拆單運算',
+          '• 串接架構：綠界/LINE Pay 金流 API、黑貓宅急便標籤列印 API'
         ],
-        proto: '完成包含「品牌商品型錄」、「多規格選購 PDP」、「購物車分步結帳」、「訂單物流追蹤」共 5 套高擬真互動頁面原型與點擊動效。'
+        proto: '完成商品型錄、規格選購、購物車結帳、訂單物流追蹤等 5 套高擬真互動原型。'
       },
       booking: {
         title: '美業線上預約系統範例',
-        subtitle: '美髮沙龍 ‧ 設計師即時預約與訂金收取',
-        prompt: '我是一間美髮沙龍的老闆，希望讓客人在 LINE 或手機網頁上直接選設計師、挑選染燙服務與預約時段，線上刷卡預付 500 元訂金，前一天自動發 LINE 提醒通知，後台方便設計師排假和看業績。',
+        subtitle: '美髮沙龍 ‧ 時段預約與訂金收取',
+        prompt: '我想做：線上預約排程系統\n1. 需求：沙龍客人手機挑選設計師、服務項目與時段\n2. 功能：線上刷卡預付 500 元訂金，防跑單\n3. 提醒：預約前一天自動發送 LINE 提醒推播通知',
         specs: [
-          '• 核心架構：即時時段防撞演算法、設計師服務項目庫存動態排程',
-          '• 商業邏輯：預付訂金金流託管、取消退款天數扣款規則、自動提醒定時器',
-          '• 串接架構：LINE Messaging API 官方帳號推播、信用卡 3D 驗證串接'
+          '• 核心架構：即時時段防撞演算法、設計師班表排程動態管理',
+          '• 商業邏輯：預付訂金金流託管、取消退款規則、自動推播定時器',
+          '• 串接架構：LINE Messaging API 官方帳號推播、信用卡 3D 驗證'
         ],
-        proto: '完成「服務選單與設計師作品集」、「月曆時段點選」、「訂金結帳」、「預約憑證與行事曆同步」之全流程互動原型。'
+        proto: '完成服務選單、設計師作品集、月曆預約時段、訂金結帳等全流程互動原型。'
       },
       membership: {
         title: '會員成長積點系統範例',
-        subtitle: '餐飲連鎖 ‧ 任務闖關集點與優惠券兌換',
-        prompt: '我們連鎖餐飲想做一套會員專屬的集點回饋系統，客人結帳報電話就能累計點數，每週有簽到或滿額小任務可額外領優惠券，點數可以換限定周邊或折抵消費，要有排行榜刺激客人常回來吃。',
+        subtitle: '連鎖門市 ‧ 任務集點與優惠券核銷',
+        prompt: '我想做：連鎖門市會員積點系統\n1. 需求：門市結帳報手機號碼即可快速累積會員點數\n2. 功能：每週簽到/滿額小任務領優惠券、點數折抵消費\n3. 核銷：門市 POS 機掃碼核銷 QR Code 條碼',
         specs: [
-          '• 核心架構：會員點數流水帳（防重放攻擊）、任務觸發引擎、卡券核銷系統',
-          '• 商業邏輯：點數效期到期提醒、動態階梯式優惠券兌換邏輯、好友推薦雙向獎勵',
-          '• 串接架構：POS 機點數查詢 API、門市掃碼核銷 QR Code 驗證模組'
+          '• 核心架構：會員點數流水帳、任務觸發引擎、卡券核銷系統',
+          '• 商業邏輯：點數效期到期提醒、階梯式優惠兌換、好友推薦雙向獎勵',
+          '• 串接架構：門市 POS 點數查詢 API、掃碼核銷 QR Code 模組'
         ],
-        proto: '完成「會員點數儀表板」、「每週任務中心」、「優惠券票匣與條碼核銷」、「等級特權升級」擬真高擬真原型。'
+        proto: '完成會員點數儀表板、每週任務中心、優惠券票匣與條碼核銷擬真原型。'
       }
     };
 
     let currentPresetKey = 'ecommerce';
+
+    // 點擊快速帶入條列式範例至輸入框，並帶有平滑聚焦反饋
+    function applyPreset(key) {
+      currentPresetKey = key;
+      const data = IDEA_PRESETS[key] || IDEA_PRESETS.ecommerce;
+      const textarea = document.getElementById('user-prompt');
+      if (textarea && data) {
+        textarea.value = data.prompt;
+        textarea.focus();
+        // 微型高亮反饋
+        textarea.classList.add('ring-2', 'ring-primary/40');
+        setTimeout(() => {
+          textarea.classList.remove('ring-2', 'ring-primary/40');
+        }, 600);
+      }
+    }
 
     function openIdeaModal(key) {
       currentPresetKey = key;
