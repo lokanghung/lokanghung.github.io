@@ -104,9 +104,9 @@
 <body
   class="bg-background font-sans text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-primary">
 
-  <!-- ================= MOBILE TOP NAVIGATION (HEADER) ================= -->
+  <!-- ================= 手機版頂部導航 (MOBILE ONLY: < 768px) ================= -->
   <header
-    class="block lg:hidden fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-variant/70 shadow-[0_1px_12px_rgba(20,27,60,0.04)]">
+    class="block md:hidden fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-variant/70 shadow-[0_1px_12px_rgba(20,27,60,0.04)]">
     <!-- 頂部品牌 Slogan 通欄公告條 (行動版 方案 B) -->
     <div
       class="w-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white py-1 px-3 text-center border-b border-white/10 shadow-xs">
@@ -209,9 +209,9 @@
     </div>
   </header>
 
-  <!-- ================= DESKTOP TOP NAVIGATION (HEADER) ================= -->
+  <!-- ================= 平板與桌面版頂部導航 (TABLET & DESKTOP: >= 768px) ================= -->
   <header
-    class="hidden lg:block fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-variant/70 shadow-[0_1px_16px_rgba(20,27,60,0.06)]">
+    class="hidden md:block fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/95 backdrop-blur-xl border-b border-surface-variant/70 shadow-[0_1px_16px_rgba(20,27,60,0.06)]">
     <!-- 頂部品牌 Slogan 通欄公告條 (方案 B) -->
     <div
       class="w-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white py-1.5 px-4 text-center border-b border-white/10 shadow-xs">
@@ -223,8 +223,8 @@
           雙 7 OFF
         </span>
         <span class="font-extrabold tracking-tight">「雙 7 OFF，讓您時間、成本 70% OFF」</span>
-        <span class="text-white/60 font-normal">｜</span>
-        <span class="text-amber-200 font-bold">最快 14 天交付 ‧ 現省 15-30 萬 ‧ 歡迎全台盡情比價</span>
+        <span class="text-white/60 font-normal hidden xl:inline">｜</span>
+        <span class="text-amber-200 font-bold hidden xl:inline">最快 14 天交付 ‧ 現省 15-30 萬 ‧ 歡迎全台盡情比價</span>
         <a href="#advantages"
           class="inline-flex items-center gap-0.5 text-white underline underline-offset-2 hover:text-amber-300 transition-colors font-extrabold ml-1">
           <span>了解詳情</span>
@@ -233,48 +233,48 @@
       </div>
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="h-16 lg:h-18 flex items-center justify-between gap-4">
+      <div class="h-16 lg:h-18 flex items-center justify-between gap-3 lg:gap-4">
         <!-- Brand Logo -->
-        <a class="flex items-center gap-3 shrink-0 group" href="#">
+        <a class="flex items-center gap-2.5 lg:gap-3 shrink-0 group" href="#">
           <div
-            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary via-primary-container to-secondary p-0.5 shadow-md shadow-primary/20 flex items-center justify-center transition-transform group-hover:scale-105">
+            class="w-9 h-9 lg:w-10 lg:h-10 rounded-xl bg-gradient-to-tr from-primary via-primary-container to-secondary p-0.5 shadow-md shadow-primary/20 flex items-center justify-center transition-transform group-hover:scale-105">
             <div class="w-full h-full bg-surface-container-lowest rounded-[9px] flex items-center justify-center">
-              <span class="font-mono text-primary font-black text-lg tracking-tighter">鴻</span>
+              <span class="font-mono text-primary font-black text-base lg:text-lg tracking-tighter">鴻</span>
             </div>
           </div>
           <div class="flex flex-col">
-            <div class="flex items-center gap-2">
-              <span class="font-sans text-lg lg:text-xl font-black tracking-tight text-on-surface">鴻運算</span>
+            <div class="flex items-center gap-1.5 lg:gap-2">
+              <span class="font-sans text-base lg:text-xl font-black tracking-tight text-on-surface">鴻運算</span>
               <span
-                class="font-mono text-[10px] font-bold uppercase tracking-wider text-primary px-2 py-0.5 rounded-full bg-primary-fixed/70 border border-primary-fixed-dim">AI
+                class="font-mono text-[9px] lg:text-[10px] font-bold uppercase tracking-wider text-primary px-1.5 lg:px-2 py-0.5 rounded-full bg-primary-fixed/70 border border-primary-fixed-dim">AI
                 STUDIO</span>
             </div>
-            <span class="text-[10px] font-sans font-bold text-primary hidden sm:inline-block">雙 7 OFF ‧ 時間、成本 70%
+            <span class="text-[9px] lg:text-[10px] font-sans font-bold text-primary hidden sm:inline-block">雙 7 OFF ‧ 時間、成本 70%
               OFF</span>
           </div>
         </a>
-        <!-- Desktop Nav Links -->
+        <!-- Desktop & Tablet Nav Links -->
         <nav class="flex items-center gap-1 lg:gap-2">
-          <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-bold text-primary bg-primary/10 border border-primary/25 hover:bg-primary-fixed/50 flex items-center gap-1.5 shadow-xs transition-all"
+          <a class="px-2.5 lg:px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-sans font-bold text-primary bg-primary/10 border border-primary/25 hover:bg-primary-fixed/50 flex items-center gap-1 lg:gap-1.5 shadow-xs transition-all"
             href="#advantages">
             <span class="material-symbols-outlined text-[15px] text-primary">bolt</span>
             <span>雙引擎</span>
             <span
-              class="px-2 py-0.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-[11px] font-black tracking-tight leading-none shadow-xs">雙
+              class="px-1.5 lg:px-2 py-0.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-[10px] lg:text-[11px] font-black tracking-tight leading-none shadow-xs">雙
               7 OFF</span>
           </a>
-          <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+          <a class="px-2.5 lg:px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
             href="#deliverables">免費體驗</a>
-          <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+          <a class="px-2.5 lg:px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
             href="#pain-points">AI陷阱</a>
-          <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+          <a class="px-2.5 lg:px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-sans font-semibold text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
             href="#demo">體驗成果</a>
-          <a class="px-3.5 py-1.5 rounded-full text-sm font-sans font-bold text-primary bg-primary-fixed/50 hover:bg-primary-fixed transition-all"
+          <a class="px-2.5 lg:px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-sans font-bold text-primary bg-primary-fixed/50 hover:bg-primary-fixed transition-all"
             href="#cta">免費開始</a>
         </nav>
         <!-- CTA Button -->
-        <div class="flex items-center gap-2.5 shrink-0">
-          <a class="inline-flex h-10 px-5 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-xs lg:text-sm font-bold tracking-wide items-center gap-2 transition-all shadow-md shadow-primary/25 active:scale-95 hover:brightness-105"
+        <div class="flex items-center gap-2 shrink-0">
+          <a class="inline-flex h-9 lg:h-10 px-3.5 lg:px-5 rounded-full bg-gradient-to-r from-primary via-primary-container to-secondary text-white font-sans text-xs lg:text-sm font-bold tracking-wide items-center gap-1.5 lg:gap-2 transition-all shadow-md shadow-primary/25 active:scale-95 hover:brightness-105"
             href="#cta">
             <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
             <span>免費取得規格與原型，讓您盡情<span
@@ -287,10 +287,10 @@
   </header>
 
   <!-- ================= MAIN CONTENT WRAPPER ================= -->
-  <main class="flex-1 flex flex-col relative w-full pt-44 sm:pt-48 lg:pt-32">
+  <main class="flex-1 flex flex-col relative w-full pt-28 md:pt-32">
 
-    <!-- ================= MOBILE & TABLET VIEW CONTENT (max-w-lg / md:max-w-2xl) ================= -->
-    <div class="block lg:hidden max-w-lg md:max-w-2xl mx-auto w-full overflow-x-hidden">
+    <!-- ================= 手機版專用內容 (MOBILE ONLY: < 768px / md:hidden) ================= -->
+    <div class="block md:hidden max-w-lg mx-auto w-full overflow-x-hidden">
       <!-- SECTION 01: HERO 行動版迎賓區 -->
       <section class="relative px-4 pt-10 sm:pt-12 pb-10 flex flex-col items-center text-center overflow-hidden">
         <div
@@ -395,8 +395,7 @@
       </section>
 
       <!-- SECTION 01: 行動版核心優勢 / 解決方案 (雙引擎 ‧ 實現真正雙 7 OFF) -->
-      <section
-        class="px-4 py-11 flex flex-col gap-6 bg-slate-50 border-t border-slate-200 scroll-mt-24"
+      <section class="px-4 py-11 flex flex-col gap-6 bg-slate-50 border-t border-slate-200 scroll-mt-24"
         id="advantages-m">
         <div class="flex flex-col gap-1.5 text-center items-center">
           <!-- <div
@@ -698,8 +697,7 @@
       </section>
 
       <!-- SECTION 03: 創業做系統 ‧ 避開 AI 陷阱 ‧ 雙引擎實現雙 7 OFF -->
-      <section
-        class="px-4 py-11 flex flex-col gap-6 bg-slate-50 border-t border-slate-200 scroll-mt-24"
+      <section class="px-4 py-11 flex flex-col gap-6 bg-slate-50 border-t border-slate-200 scroll-mt-24"
         id="pain-points-m">
         <!-- Section Header (與 Section 01, 02 結構風格完全一致) -->
         <div class="flex flex-col gap-1.5 text-center items-center">
@@ -1025,8 +1023,8 @@
       </section>
     </div>
 
-    <!-- ================= DESKTOP VIEW CONTENT (hidden lg:block) ================= -->
-    <div class="hidden lg:block w-full">
+    <!-- ================= 平板與桌面版內容 (TABLET & DESKTOP: >= 768px 一同維護) ================= -->
+    <div class="hidden md:block w-full">
       <!-- ================= HERO 首屏區塊 ================= -->
       <section class="relative px-4 sm:px-6 lg:px-8 py-10 lg:py-20 overflow-hidden">
         <div
@@ -1153,8 +1151,7 @@
       </section>
 
       <!-- ================= SECTION 01: 獨創「雙引擎」 ‧ 實現真正「雙 7 OFF」 (桌機) ================= -->
-      <section
-        class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-slate-50 border-t border-slate-200 scroll-mt-20"
+      <section class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-slate-50 border-t border-slate-200 scroll-mt-20"
         id="advantages">
         <div class="max-w-7xl mx-auto flex flex-col gap-10 lg:gap-14">
           <div class="flex flex-col gap-3 text-center items-center">
@@ -1489,8 +1486,7 @@
       </section>
 
       <!-- ================= SECTION 03: 創業做系統 ‧ 避開 AI 陷阱 (桌機) ================= -->
-      <section
-        class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-slate-50 border-t border-slate-200 scroll-mt-20"
+      <section class="px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-slate-50 border-t border-slate-200 scroll-mt-20"
         id="pain-points">
         <div class="max-w-7xl mx-auto flex flex-col gap-10 lg:gap-14">
           <!-- Section Header -->
@@ -2037,9 +2033,9 @@
     </section>
   </main>
 
-  <!-- ================= MOBILE FOOTER ================= -->
+  <!-- ================= 手機版頁尾 (MOBILE ONLY: < 768px) ================= -->
   <footer
-    class="block lg:hidden w-full bg-surface-container-lowest border-t border-surface-variant/80 px-4 py-8 flex flex-col gap-4 mt-2 max-w-lg md:max-w-2xl mx-auto text-left">
+    class="block md:hidden w-full bg-surface-container-lowest border-t border-surface-variant/80 px-4 py-8 flex flex-col gap-4 mt-2 max-w-lg mx-auto text-left">
     <div class="flex flex-col gap-1.5">
       <div class="flex items-center gap-2">
         <div
@@ -2063,9 +2059,9 @@
     </p>
   </footer>
 
-  <!-- ================= DESKTOP FOOTER ================= -->
+  <!-- ================= 平板與桌面版頁尾 (TABLET & DESKTOP: >= 768px) ================= -->
   <footer
-    class="hidden lg:block w-full bg-surface-container-lowest border-t border-surface-variant/80 py-12 px-4 sm:px-6 lg:px-8">
+    class="hidden md:block w-full bg-surface-container-lowest border-t border-surface-variant/80 py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto flex flex-col gap-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         <!-- Col 1: Brand -->
