@@ -1,0 +1,14 @@
+# Dependencies & Package Managers
+node_modules/
+package.json
+package-lock.json
+
+# Local generator scripts (Not part of website pages)
+generate_business_cards.js
+generate_gold_cards.js
+
+# Backup & temporary files
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db

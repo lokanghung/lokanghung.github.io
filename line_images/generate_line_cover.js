@@ -334,7 +334,7 @@ const coverHtml = `<!DOCTYPE html>
   <div class="content-wrapper">
     <div class="badge-tag">
       <span class="pulse-dot"></span>
-      <span>創業限定 ‧ 鴻運算 AI STUDIO</span>
+      <span>創業限定 ‧ 鴻運算 AI</span>
     </div>
 
     <h1 class="main-title">
@@ -542,7 +542,7 @@ const previewHtml = `<!DOCTYPE html>
       <img src="file:///${outDir.replace(/\\/g, '/')}/line_logo_clean_640x640.png" />
     </div>
     <div class="account-name">
-      <span>鴻運算 AI STUDIO</span>
+      <span>鴻運算 AI</span>
       <span class="verified-badge">✓</span>
     </div>
     <div class="account-status">創業限定 ‧ 極速雙 7 OFF 打造網站與 App</div>
