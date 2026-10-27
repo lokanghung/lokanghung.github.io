@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>羅康鴻 ｜ 鴻運算 AI 創辦人 ‧ 系統架構師 數位名片</title>
+  <meta name="description" content="20年工藝 ‧ 「時間成本」雙3折 ｜ 免費規格原型 ‧ 最快14天交付 ｜ TEL: 0925-519-860" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- LINE / Facebook / Social Share Open Graph Tags (LINE 聊天室自動產生大圖預覽) -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="鴻運算 AI" />
+  <meta property="og:url" content="https://it123.in/card_h.html" />
+  <meta property="og:title" content="羅康鴻 ｜ 鴻運算 AI 創辦人 ‧ 系統架構師" />
+  <meta property="og:description" content="20年工藝 ‧ 「時間成本」雙3折 ｜ 免費規格原型 ‧ 最快14天交付 ｜ 點擊查看名片與聯繫資訊" />
+  <meta property="og:image" content="https://it123.in/images/card_h.png" />
+  <meta property="og:image:secure_url" content="https://it123.in/images/card_h.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1080" />
+  <meta property="og:image:alt" content="羅康鴻 鴻運算 AI 皇家金底電子名片 (橫式)" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="羅康鴻 ｜ 鴻運算 AI 創辦人 ‧ 系統架構師" />
+  <meta name="twitter:description" content="20年工藝 ‧ 「時間成本」雙3折 ｜ 免費規格原型 ‧ 最快14天交付" />
+  <meta name="twitter:image" content="https://it123.in/images/card_h.png" />
+
+  <!-- Preload business card image for instant display -->
+  <link rel="preload" as="image" href="images/card_h.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-dark: #080a10;
+      --gold-primary: #d4af37;
+      --gold-light: #f5d77f;
+      --gold-dark: #8c6a1e;
+      --line-green: #06c755;
+      --line-green-hover: #05b04c;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: #f1ece1;
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 24px 16px 48px;
+      position: relative;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 背景奢華金屬微光 */
+    .bg-glow-1 {
+      position: fixed;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.14) 0%, transparent 70%);
+      filter: blur(50px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 0 auto;
+    }
+
+    /* 頂部品牌標記 */
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 8px;
+    }
+    .brand-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #181d28, #0a0d14);
+      border: 1px solid var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--gold-light);
+    }
+    .brand-title {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+    }
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: var(--gold-light);
+    }
+
+    /* 名片圖片主卡 */
+    .card-wrapper {
+      width: 100%;
+      background: #0f141f;
+      border-radius: 18px;
+      padding: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.75),
+        0 0 30px rgba(212, 175, 55, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-wrapper:hover {
+      box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.85),
+        0 0 40px rgba(212, 175, 55, 0.2);
+    }
+
+    .card-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      user-select: auto;
+      -webkit-touch-callout: default; /* 確保手機長按能跳出存圖/掃描選單 */
+    }
+
+    /* 長按提示條 */
+    .tip-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #c9b896;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px dashed rgba(212, 175, 55, 0.3);
+      padding: 8px 14px;
+      border-radius: 12px;
+      width: 100%;
+      text-align: center;
+    }
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      box-shadow: 0 0 8px var(--gold-light);
+    }
+
+    /* 行動按鈕組 (LINE 專用優化) */
+    .action-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 18px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    /* LINE 官方按鈕 */
+    .btn-line {
+      background: var(--line-green);
+      color: #ffffff;
+      box-shadow: 0 4px 16px rgba(6, 199, 85, 0.35);
+      grid-column: span 2;
+      font-size: 15px;
+      padding: 14px 20px;
+    }
+    .btn-line:hover {
+      background: var(--line-green-hover);
+    }
+
+    /* 電話撥打按鈕 */
+    .btn-call {
+      background: linear-gradient(135deg, #1f2738, #131926);
+      color: #f5f2eb;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .btn-call:hover {
+      background: #252f44;
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+
+    /* 官網按鈕 */
+    .btn-web {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(140, 106, 30, 0.2));
+      color: var(--gold-light);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+    .btn-web:hover {
+      background: rgba(212, 175, 55, 0.25);
+    }
+
+    /* 下載名片圖檔按鈕 */
+    .btn-download {
+      grid-column: span 2;
+      background: transparent;
+      color: #9aa4b8;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      padding: 10px;
+    }
+    .btn-download:hover {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* 頁尾著作權 */
+    .footer {
+      margin-top: 18px;
+      font-size: 11px;
+      color: #64748b;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+
+  <main class="container">
+    <!-- 頂部品牌標記 -->
+    <header class="brand-header">
+      <div class="brand-badge">鴻</div>
+      <span class="brand-title">鴻運算 AI</span>
+      <span class="brand-tag">數位名片 ‧ 橫式</span>
+    </header>
+
+    <!-- 名片圖片本體 (長按直接存圖或掃碼) -->
+    <section class="card-wrapper">
+      <img
+        class="card-img"
+        src="images/card_h.png"
+        alt="羅康鴻 創辦人 ‧ 系統架構師 電子名片 (橫式)"
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <!-- 手機長按儲存提示 -->
+    <div class="tip-bar">
+      <span class="pulse-dot"></span>
+      <span>手機長按名片圖片，即可存入相簿或直接識別 QR Code</span>
+    </div>
+
+    <!-- 快速行動按鈕 (LINE / 通話 / 官網 / 下載) -->
+    <nav class="action-grid" aria-label="聯絡與下載">
+      <a class="btn btn-line" href="https://line.me/R/ti/p/@950iayru" target="_blank" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 5.92 2 10.75c0 4.31 3.56 7.92 8.36 8.62.33.07.78.22.89.51.1.26.07.67.03.93l-.15.9c-.05.28-.22 1.1.97.6 1.18-.5 6.38-3.76 8.7-6.44C22.28 13.97 22 10.75 22 10.75 22 5.92 17.52 2 12 2z"/>
+        </svg>
+        <span>加 LINE 官方諮詢（免費領取規格原型）</span>
+      </a>
+
+      <a class="btn btn-call" href="tel:0925519860">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        <span>撥打電話諮詢</span>
+      </a>
+
+      <a class="btn btn-web" href="https://it123.in" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+        </svg>
+        <span>前往官方網站</span>
+      </a>
+
+      <a class="btn btn-download" href="images/card_h.png" download="羅康鴻_鴻運算AI_名片_橫式.png">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        <span>下載高解析名片圖檔 (PNG)</span>
+      </a>
+    </nav>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+      <p>© 2025 鴻運算 AI. All rights reserved.</p>
+      <p>Made with AI Agents &amp; 20 Years Engineering Craftsmanship</p>
+    </footer>
+  </main>
+</body>
+</html>
